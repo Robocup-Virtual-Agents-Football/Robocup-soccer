@@ -1,4 +1,4 @@
-<deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
+<deployment-project plugin="plugin.deploytool" plugin-version="1.0">
   <configuration build-checksum="854798148" file="D:\myStuff\RoboCupSoccerSim\FullRunManager.prj" location="D:\myStuff\RoboCupSoccerSim" name="FullRunManager" preferred-package-location="D:\myStuff\RoboCupSoccerSim\FullRunManager\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
     <param.appname>FullRunManager</param.appname>
     <param.icon />
