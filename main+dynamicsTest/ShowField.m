@@ -1,4 +1,4 @@
-function [] = ShowField(ball_position)%, headingAngle)
+function [] = ShowField(ball_position, robot_position, headingAngle)
 %SHOWFIELD Draws soccer field
 %   Returns fig which is a handle to current figure containing the field
 
@@ -78,7 +78,7 @@ fig = gcf;
 %     'Units','normalized','Position',[0.85, 0.85,0.12,0.05],...
 %     'FontSize',18);
 
-DrawSoccer(cfg.ball_radius, ball_position)%, headingAngle);
+DrawSoccer(ball_position, robot_position, headingAngle);
 
 %Setup window
 axis tight

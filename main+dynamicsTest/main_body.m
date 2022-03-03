@@ -17,6 +17,8 @@ y = 0;
 force = [7 7];
 vel_ball = [0 0];
 ball_position = [0 0];
+robot_position = [-3 2; -3 1; -3 0; -3 -1; 3 2; 3 1; 3 0; 3 -1];
+headingAngle = [1 1 1 1 1 1 1 1];
 
 %force = [0 0];
 %vel_ball = [1 1];
@@ -50,31 +52,28 @@ for timeStep = 1:timeSteps_total
 
     time(timeStep + 1)    = timeStep * stepSize_time;
 
-    [force_new vel_ball_new] = BallDynamicsTest(force(timeStep,:), vel_ball(timeStep,:), ball_position(timeStep,:));
-    ball_position_new = ball_position(timeStep,:) + 0.5*(vel_ball_new +vel_ball(timeStep,:))*cfg.timestep;
-
-    vel_ball(timeStep+1,:) = vel_ball_new;
-    force(timeStep+1,:) = force_new;
-    ball_position(timeStep+1,:) = ball_position_new;
+%     [force_new vel_ball_new] = BallDynamicsTest(force(timeStep,:), vel_ball(timeStep,:), ball_position(timeStep,:));
+%     ball_position_new = ball_position(timeStep,:) + 0.5*(vel_ball_new +vel_ball(timeStep,:))*cfg.timestep;
+% 
+%     vel_ball(timeStep+1,:) = vel_ball_new;
+%     force(timeStep+1,:) = force_new;
+%     ball_position(timeStep+1,:) = ball_position_new;
 
 %% Draw Goal
 
 
 %% Draw Field
 
-% headingAngle = 2;
-ShowField(ball_position(timeStep,:)); 
+ShowField(ball_position, robot_position, headingAngle); 
 figure(1); clf; hold on; grid on; 
 
 xlabel('y, m'); ylabel('x, m');
 
+headingAngle = headingAngle + 0.1;
+
 end
 
 %% Plot results
-% *----------------------------------*
-%  YOU CAN ADD OR CHANGE FIGURES HERE
-%  don't forget to add axis labels!
-% *----------------------------------*
 
 figure(2); hold on; grid on;
 plot(force);
