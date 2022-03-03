@@ -35,6 +35,8 @@ for i = 1:(cfg.num_players)
     line([robot_position(i,1), (lineEnd_y + robot_position(i,1))],...
         [robot_position(i,2), (lineEnd_x +robot_position(i,2))], 'color', 'b');
 
+    asdfhu
+
 end
 
 
