@@ -20,8 +20,6 @@ staticIm = imread('static2.png');
 frame1 = imread('pos1.png');
 frame2 = imread('pos2.png');
 
-% [static, map, alphaStatic] = imread('static2.png');
-
 %green field
 rectangle(ax ,'Position',[-cfg.field_length_max,-cfg.field_width_max,2*cfg.field_length_max,2*cfg.field_width_max],...
     'FaceColor','#32CD32','EdgeColor','none');
@@ -98,10 +96,12 @@ end
 
 if robot_state(i) == 1
     if imSelection(i) == 0 || imSelection(i) == 1
-        img = imrotate(frame1,angle,'crop');
+%         img = imrotate(frame1,angle,'crop');
+        img = staticIm;
         imSelection(i) = 2;
     elseif imSelection(i) == 2
-        img = imrotate(frame2,angle,'crop');
+%         img = imrotate(frame2,angle,'crop');
+        img = staticIm;
         imSelection(i) = 1;
     end
 end

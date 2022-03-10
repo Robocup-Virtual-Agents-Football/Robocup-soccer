@@ -13,6 +13,8 @@ function [] = DrawSoccer(ball_position, robot_position, headingAngle)
 
 ax = gca;
 cfg = ParameterConfiguration();
+ImgStatic = 'static2.png'
+[static, map, alphaStatic] = imread(ImgStatic);
 
 %% Draw Ball
 viscircles(ball_position,cfg.ball_radius,'Color','black');
@@ -25,16 +27,23 @@ viscircles(ball_position,cfg.ball_radius-0.06,'Color','white');
 
 %% Draw Robot
 for i = 1:(cfg.num_players)
-    viscircles(robot_position(i,:),0.15,'Color','black');
+%     viscircles(robot_position(i,:),0.15,'Color','black');
+% 
+%     %% Calculate end points of the line
+%     % Line is 0.01m larger than the robot
+%     lineEnd_x = cos(headingAngle(i)) * (0.15 + 0.03);
+%     lineEnd_y = sin(headingAngle(i)) * (0.15 + 0.03);
+% 
+%     line([robot_position(i,1), (lineEnd_y + robot_position(i,1))],...
+%         [robot_position(i,2), (lineEnd_x +robot_position(i,2))], 'color', 'b');
 
-    %% Calculate end points of the line
-    % Line is 0.01m larger than the robot
-    lineEnd_x = cos(headingAngle(i)) * (0.15 + 0.03);
-    lineEnd_y = sin(headingAngle(i)) * (0.15 + 0.03);
+% axes('Position',[0.5*(robot_position(i,1)+cfg.field_length_max)/cfg.field_length_max...
+%     0.5*(robot_position(i,2)+cfg.field_width_max)/cfg.field_width_max 0.05 0.1]);
 
-    line([robot_position(i,1), (lineEnd_y + robot_position(i,1))],...
-        [robot_position(i,2), (lineEnd_x +robot_position(i,2))], 'color', 'b');
-
+axes('Position',[0.5 0.5 0.05 0.1]);
+image(static, 'AlphaData', alphaStatic);
+box off;
+axis off;
 
 end
 
