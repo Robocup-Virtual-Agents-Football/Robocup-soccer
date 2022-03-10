@@ -109,8 +109,9 @@ end
 % img = imrotate(staticIm,angle,'crop');
 
 static = img;
-map = [];
-alphaStatic = img(:,:,1);
+alphaStatic1 = img(:,:,1);
+alphaStatic2 = img(:,:,2);
+alphaStatic3 = img(:,:,3);
 
 % Robot Coordinates
 % mapping -5 to 5 ---> 0.106 to 0.88, -4 to 4 ---> 0.055-0.975
@@ -118,7 +119,12 @@ x = interp1([-5,5],[0.106,0.88],robot_position(i,1));
 y = interp1([-4,4],[0.055,0.975],robot_position(i,2));
 
 axes('Position',[x y 0.05 0.1]);
-image(static, 'AlphaData', alphaStatic);
+image(static, 'AlphaData', alphaStatic1);
+hold on;
+image(static, 'AlphaData', alphaStatic2);
+hold on;
+image(static, 'AlphaData', alphaStatic3);
+hold on;
 
 box on;
 axis off;

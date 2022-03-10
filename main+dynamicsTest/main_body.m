@@ -66,12 +66,12 @@ for timeStep = 1:timeSteps_total
 
 %% Draw Field
 
-imSelection = ShowField(ball_position, robot_position, headingAngle, robot_state, imSelection)
+imSelection = ShowField(ball_position, robot_position, headingAngle, robot_state, imSelection);
 figure(1); clf; hold on; grid on; 
 
 xlabel('y, m'); ylabel('x, m');
 
-headingAngle = headingAngle + 0.01;
+headingAngle = headingAngle + 0.1;
 
 end
 
