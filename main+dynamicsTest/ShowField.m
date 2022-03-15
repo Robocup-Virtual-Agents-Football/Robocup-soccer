@@ -118,7 +118,7 @@ alphaStatic3 = img(:,:,3);
 x = interp1([-5,5],[0.106,0.88],robot_position(i,1));
 y = interp1([-4,4],[0.055,0.975],robot_position(i,2));
 
-axes('Position',[x y 0.05 0.1]);
+axes('Position',[x y 0.04 0.08]);
 image(static, 'AlphaData', alphaStatic1);
 hold on;
 image(static, 'AlphaData', alphaStatic2);
