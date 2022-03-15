@@ -71,7 +71,7 @@ figure(1); clf; hold on; grid on;
 
 xlabel('y, m'); ylabel('x, m');
 
-headingAngle = headingAngle + 0.1;
+headingAngle = headingAngle;
 
 end
 
