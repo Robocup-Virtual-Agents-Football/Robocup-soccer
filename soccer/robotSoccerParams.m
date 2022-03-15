@@ -7,6 +7,8 @@ load soccerBusTypes;
 
 %% Soccer field parameters
 % X and Y limits for the field
+addpath utils\
+addpath datatypes\
 fieldLimitsX = [0 92];
 fieldLimitsY = [0 47];
 
