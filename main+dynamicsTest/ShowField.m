@@ -146,11 +146,11 @@ y = interp1([-4,4],[0.055,0.975],robot_position(i,2));
 
 axes('Position',[x y 0.04 0.08]);
 image(frame, 'AlphaData', alpha1);
-% hold on;
-% image(frame, 'AlphaData', alpha2);
-% hold on;
-% image(frame, 'AlphaData', alpha3);
-% hold on;
+hold on;
+image(frame, 'AlphaData', alpha2);
+hold on;
+image(frame, 'AlphaData', alpha3);
+hold on;
 
 box on;
 axis off;
