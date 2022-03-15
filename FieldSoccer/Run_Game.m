@@ -7,7 +7,7 @@ clear
 %set up configuration variables
 addpath game pff
 cfg = Config();
-cfg.drawgame = false;
+cfg.drawgame = true;
 
 %set up behavior
 red_team = @movePff;

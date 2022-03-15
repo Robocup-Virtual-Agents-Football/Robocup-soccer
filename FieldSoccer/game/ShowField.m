@@ -1,15 +1,23 @@
-function [ fig, stats_handles, ax] = ShowField()
+function [ fig, stats_handles, ax ] = ShowField(cfg)
+%function [ fig, ax ] = ShowField(cfg)
 %SHOWFIELD Draws soccer field
 %   Reterusn fig which is a handle to current figure containing the field
 
-init = FullRunConfig(1);
-cfg = init;
+%cfg = Config();
 %prep figure window
 ax = gca;
 
+%<<<<<<< to be changed
+%function [ fig, stats_handles, ax] = ShowField()
+%%SHOWFIELD Draws soccer field
+%%   Reterusn fig which is a handle to current figure containing the field
+%
+%init = FullRunConfig(1);
+%cfg = init;
+
 %green field
 rectangle(ax ,'Position',[-cfg.field_length_max,-cfg.field_width_max,2*cfg.field_length_max,2*cfg.field_width_max],...
-    'FaceColor','green','EdgeColor','none');
+    'FaceColor','#77AC30','EdgeColor','none');
 
 %boundary lines
 rectangle(ax ,'Position',[-cfg.field_length,-cfg.field_width,2*cfg.field_length,cfg.line_thickness],...
@@ -57,6 +65,7 @@ rectangle(ax ,'Position',[cfg.goal_posts(3,1)-cfg.goal_depth+cfg.line_thickness/
 %return figure
 fig = gcf;
 
+
 %prep stats
 stats_handles.label = uicontrol(fig,'Style','text','String','GAME INFO ',...
     'Units','normalized','Position',[0.02, 0.88,0.12,0.05],...
@@ -79,6 +88,7 @@ stats_handles.score1 = uicontrol(fig,'Style','text','String','Red  Blue ',...
 stats_handles.score2 = uicontrol(fig,'Style','text','String','Score: ',...
     'Units','normalized','Position',[0.85, 0.85,0.12,0.05],...
     'FontSize',18);
+
 
 %Setup window
 axis tight
