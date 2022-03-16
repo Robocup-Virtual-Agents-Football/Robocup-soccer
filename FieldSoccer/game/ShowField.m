@@ -7,11 +7,10 @@ function [ fig, stats_handles, ax ] = ShowField(cfg)
 %prep figure window
 ax = gca;
 
-%<<<<<<< to be changed
+%<<<<<<<  to be uncommented to run david's code - fullRunConfig(1), remove above conflicting stuff
 %function [ fig, stats_handles, ax] = ShowField()
 %%SHOWFIELD Draws soccer field
 %%   Reterusn fig which is a handle to current figure containing the field
-%
 %init = FullRunConfig(1);
 %cfg = init;
 
