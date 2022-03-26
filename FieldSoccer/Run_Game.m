@@ -30,11 +30,11 @@ load data/NM_2016-11-22-19-55-28Supporter
 cfg.pff_weights = new_pff_weights;
       
 %run game
-[stats,scores] = GameController(cfg,bh_list);
+[s2,s1] = GameController(cfg,bh_list);
 
 %show results
-disp(stats)
-disp(scores)
+%disp(stats)
+%disp(scores)
 
 
     

@@ -20,8 +20,8 @@ end
 cfg.record_movie = false;
 
 %number of players
-cfg.num_players_red = 5;
-cfg.num_players_blue = 5;
+cfg.num_players_red = 4;
+cfg.num_players_blue = 4;
 cfg.num_players = cfg.num_players_red + cfg.num_players_blue;
 
 
@@ -34,8 +34,8 @@ cfg.start_pos(1,:) = [-3,0.5,0];
 
 cfg.start_pos(7,:) = [1,0,pi];
 cfg.start_pos(8,:) = [2,1,pi];
-cfg.start_pos(9,:) = [2,-1,pi];
-cfg.start_pos(10,:) = [3,-0.5,pi];
+%cfg.start_pos(9,:) = [2,-1,pi];
+%cfg.start_pos(10,:) = [3,-0.5,pi];
 cfg.start_pos(6,:) = [3,0.5,pi];
 
 %starting roles
@@ -50,8 +50,8 @@ else
 end
 
 %ball parameters
-cfg.ball_radius = 0.04; %m
-cfg.ball_friction = 0.45; %m/s^2 
+cfg.ball_radius = 0.07; %m
+cfg.ball_friction = 0.35; %m/s^2 
 cfg.MinBallVel = 0.01; %m/s
 
 %player parameters

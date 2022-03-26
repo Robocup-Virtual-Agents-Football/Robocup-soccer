@@ -57,9 +57,9 @@ rectangle(ax ,'Position',[-cfg.circle_radius,-cfg.circle_radius,2*cfg.circle_rad
     'FaceColor','none','EdgeColor','white','Curvature',[1,1],'LineWidth',4)
 %goals
 rectangle(ax ,'Position',[cfg.goal_posts(1,1)+cfg.line_thickness/2,cfg.goal_posts(1,2),cfg.goal_depth,-cfg.goal_posts(1,2)+cfg.goal_posts(2,2)],...
-    'FaceColor','blue','EdgeColor','white','LineWidth',5)
+    'FaceColor','#ADD8E6','EdgeColor','white','LineWidth',5)
 rectangle(ax ,'Position',[cfg.goal_posts(3,1)-cfg.goal_depth+cfg.line_thickness/2,cfg.goal_posts(3,2),cfg.goal_depth,-cfg.goal_posts(3,2)+cfg.goal_posts(4,2)],...
-    'FaceColor','red','EdgeColor','white','LineWidth',5)
+    'FaceColor','#FF7F7F','EdgeColor','white','LineWidth',5)
 
 %return figure
 fig = gcf;
