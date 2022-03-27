@@ -1,0 +1,283 @@
+#VRML V2.0 utf8
+
+#Created with V-Realm Builder v2.0
+#Integrated Data Systems Inc.
+#www.ids-net.com
+
+
+PointLight {
+	location	100 50 50
+}
+SpotLight {
+	color	0.130048 0.58 0.170263
+	direction	0 0 -1
+	location	100 10.6 150
+}
+SpotLight {
+	color	0.130048 0.58 0.170263
+	direction	0 0 -1
+	location	100 -100 150
+}
+WorldInfo {
+	title	"Robot Soccer Simulator"
+}
+NavigationInfo {
+	headlight	FALSE
+}
+DEF Box2 Transform {
+	translation	207.366 50.0008 0
+	scale	2.2 1 1
+	children Shape {
+		appearance	Appearance {
+			material	Material {
+				diffuseColor	0.8 0.427698 0.751136
+				emissiveColor	0.177254 0.127042 0.57
+				transparency	0.1
+			}
+
+			texture	ImageTexture {
+				url	"texture/netherlands.jpg"
+			}
+
+		}
+
+		geometry	Box {
+			size	6.9 22 2
+		}
+
+	}
+}
+DEF Box1 Transform {
+	translation	-7.6656 50.0008 0
+	scale	2.2 1 1
+	children Shape {
+		appearance	Appearance {
+			material	Material {
+				diffuseColor	0.8 0.427698 0.751136
+				emissiveColor	0.177254 0.127042 0.57
+				transparency	0.1
+			}
+
+			texture	ImageTexture {
+				url	"texture/spain.jpg"
+			}
+
+		}
+
+		geometry	Box {
+			size	6.9 22 2
+		}
+
+	}
+}
+DEF Ball Transform {
+	translation	100 50 0
+	rotation	1 0 0  1.5708
+	scale	2 2 2
+	children Shape {
+		appearance	Appearance {
+			material	Material {
+				ambientIntensity	0
+				diffuseColor	1 0.985569 0.942277
+				emissiveColor	0.233073 0.234805 0.24
+				specularColor	0.25 0.0745754 0.0550513
+			}
+
+			texture	ImageTexture {
+				url	"texture/soccer_ball.jpg"
+			}
+
+		}
+
+		geometry	Cylinder {
+			radius	1.5
+		}
+
+	}
+}
+DEF Robot_3 Transform {
+	translation	150 75 0
+	rotation	1 0 0  1.5708
+	scale	3 3 3
+	children Shape {
+		appearance	Appearance {
+			material	Material {
+				emissiveColor	0.67 0.67 0.67
+			}
+
+			texture	ImageTexture {
+				url	"texture/netherlands.jpg"
+			}
+
+		}
+
+		geometry	Cylinder {
+		}
+
+	}
+}
+DEF Robot_4 Transform {
+	translation	150 25 0
+	rotation	1 0 0  1.5708
+	scale	3 3 3
+	children Shape {
+		appearance	Appearance {
+			material	Material {
+				emissiveColor	1 1 1
+			}
+
+			texture	ImageTexture {
+				url	"texture/netherlands.jpg"
+			}
+
+		}
+
+		geometry	Cylinder {
+			height	0.2
+		}
+
+	}
+}
+DEF Robot_2 Transform {
+	translation	50 25 0
+	rotation	1 0 0  1.5708
+	scale	3 3 3
+	children Shape {
+		appearance	Appearance {
+			material	Material {
+				emissiveColor	1 1 1
+			}
+
+			texture	ImageTexture {
+				url	"texture/spain.jpg"
+			}
+
+		}
+
+		geometry	Cylinder {
+			height	0.2
+		}
+
+	}
+}
+DEF Robot_1 Transform {
+	translation	50 75.0012 0
+	rotation	1 0 0  1.5708
+	scale	3 3 3
+	children Shape {
+		appearance	Appearance {
+			material	Material {
+				emissiveColor	1 1 1
+			}
+
+			texture	ImageTexture {
+				url	"texture/spain.jpg"
+			}
+
+		}
+
+		geometry	Cylinder {
+			height	0.2
+		}
+
+	}
+}
+Viewpoint {
+	position	100 50 188.5
+	description	"Top View"
+}
+DEF GOAL Transform {
+	translation	45 40 -1.9
+	children Shape {
+		appearance	Appearance {
+			material	Material {
+				emissiveColor	1 0.942277 0.985569
+			}
+
+		}
+
+		geometry	Text {
+			string	"GOAL!"
+			fontStyle	FontStyle {
+				size	50
+				spacing	3.2
+				style	"BOLDITALIC"
+			}
+
+		}
+
+	}
+}
+DEF Field Transform {
+	translation	100.281 50.2727 -9.17912e-006
+	children [ 
+	    Shape {
+		    appearance	Appearance {
+			    material	Material {
+				    diffuseColor	0.00410258 0.02 0.0072497
+				    emissiveColor	0.75 0.3245 0.115765
+			    }
+
+			    texture	NULL
+		    }
+
+		    geometry	Box {
+			    size	255.1 155.1 0.1
+		    }
+
+	    }
+
+	    Shape {
+		    appearance	Appearance {
+			    material	Material {
+				    emissiveColor	1 1 1
+			    }
+
+			    texture	NULL
+		    }
+
+		    geometry	Box {
+			    size	205.1 105.1 0.1
+		    }
+
+	    }
+
+	    Shape {
+		    appearance	Appearance {
+			    material	Material {
+				    emissiveColor	1 1 1
+			    }
+
+			    textureTransform	TextureTransform {
+				    scale	2.6 4.3
+			    }
+
+			    texture	ImageTexture {
+				    url	"texture/grass.jpg"
+				    repeatS	TRUE
+			    }
+
+		    }
+
+		    geometry	Box {
+			    size	200 100 0.1
+		    }
+
+	    }
+
+	    Shape {
+		    appearance	Appearance {
+			    material	Material {
+				    emissiveColor	1 1 1
+			    }
+
+			    texture	NULL
+		    }
+
+		    geometry	Box {
+			    size	2.2 105.1 0.1
+		    }
+
+	    }
+	]
+}

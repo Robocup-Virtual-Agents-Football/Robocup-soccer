@@ -1,0 +1,4587 @@
+Model {
+  Name			  "RoboSoccer_10b"
+  Version		  7.6
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.571"
+    NumModelReferences	    2
+    ModelReference {
+      ModelRefBlockPath	      "RoboSoccer_10b/Team_1_Strategy|Team_1_Strategy"
+    }
+    ModelReference {
+      ModelRefBlockPath	      "RoboSoccer_10b/Team_1_Strategy2|Team_2_Strategy"
+    }
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "windows-1252"
+  PreLoadFcn		  "load busobjects.mat;"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  DataTypeOverrideAppliesTo "AllNumericTypes"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  MaxMDLFileLineLength	  120
+  Created		  "Wed Jul 07 14:40:11 2010"
+  Creator		  "smahapat"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "pkodati"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Wed Oct 13 14:03:24 2010"
+  RTWModifiedTimeStamp	  208879397
+  ModelVersionFormat	  "1.%<AutoIncrement:571>"
+  ConfigurationManager	  "None"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  on
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.10.0"
+      Array {
+	Type			"Handle"
+	Dimension		9
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.10.0"
+	  StartTime		  "0.0"
+	  StopTime		  "inf"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  ConcurrentTasks	  off
+	  Solver		  "ode15s"
+	  SolverName		  "ode15s"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "DisableAll"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.10.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Version		  "1.10.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    7
+	    Cell		    "BooleansAsBitfields"
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  on
+	  UseIntDivNetSlope	  off
+	  UseSpecifiedMinMax	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.10.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  MaskedZcDiagnostic	  "warning"
+	  IgnoredZcDiagnostic	  "warning"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  InitInArrayFormatMsg	  "warning"
+	  StrictBusMsg		  "ErrorLevel1"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	  SFUnusedDataAndEventsDiag "warning"
+	  SFUnexpectedBacktrackingDiag "warning"
+	  SFInvalidInputDataAccessInChartInitDiag "warning"
+	  SFNoUnconditionalDefaultTransitionDiag "warning"
+	  SFTransitionOutsideNaturalParentDiag "warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.10.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdBitPerFloat	  32
+	  ProdBitPerDouble	  64
+	  ProdBitPerPointer	  32
+	  ProdLargestAtomicInteger "Char"
+	  ProdLargestAtomicFloat  "None"
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetBitPerFloat	  32
+	  TargetBitPerDouble	  64
+	  TargetBitPerPointer	  32
+	  TargetLargestAtomicInteger "Char"
+	  TargetLargestAtomicFloat "None"
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.10.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceErrorOnInvalidPool on
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  8
+	  Version		  "1.10.0"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimParseCustomCode	  on
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  9
+	  Version		  "1.10.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    6
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  GenerateSLWebview	  off
+	  RTWCompilerOptimization "Off"
+	  CheckMdlBeforeBuild	  "Off"
+	  CustomRebuildMode	  "OnUpdate"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      10
+	      Version		      "1.10.0"
+	      Array {
+		Type			"Cell"
+		Dimension		19
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrFcnArg"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		Cell			"ReqsInCode"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      MATLABFcnDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      InsertPolySpaceComments off
+	      SimulinkBlockComments   on
+	      MATLABSourceComments    off
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      11
+	      Version		      "1.10.0"
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"GeneratePreprocessorConditionals"
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"PortableWordSizes"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      ERTCodeCoverageTool     "None"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Disable all"
+	      CombineOutputUpdateFcns off
+	      CombineSignalStateStructs	off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    off
+	      AutosarCompliant	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	hdlcoderui.hdlcc {
+	  $ObjectID		  12
+	  Version		  "1.10.0"
+	  Description		  "HDL Coder custom configuration component"
+	  Name			  "HDL Coder"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    ""
+	    PropName		    "HDLConfigFile"
+	  }
+	  HDLCActiveTab		  "0"
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition    " [ 167, 98, 857, 644 ] "
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    1
+  }
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Abs
+      ZeroCross		      on
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      BusCreator
+      Inputs		      "4"
+      DisplayOption	      "none"
+      OutDataTypeStr	      "Inherit: auto"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      BusSelector
+      OutputAsBus	      off
+    }
+    Block {
+      BlockType		      BusToVector
+    }
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+      PreserveConstantTs      off
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ParamMin		      "[]"
+      ParamMax		      "[]"
+      ParamDataTypeStr	      "Inherit: Same as input"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Integrator
+      ExternalReset	      "none"
+      InitialConditionSource  "internal"
+      InitialCondition	      "0"
+      LimitOutput	      off
+      UpperSaturationLimit    "inf"
+      LowerSaturationLimit    "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      AbsoluteTolerance	      "auto"
+      IgnoreLimit	      off
+      ZeroCross		      on
+      ContinuousStateAttributes	"''"
+    }
+    Block {
+      BlockType		      ModelReference
+      Variant		      off
+      GeneratePreprocessorConditionals off
+      CopyOfModelProtected    off
+      DefaultDataLogging      off
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Product
+      Inputs		      "2"
+      Multiplication	      "Element-wise(.*)"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+      SFunctionDeploymentMode off
+    }
+    Block {
+      BlockType		      Saturate
+      UpperLimitSource	      "Dialog"
+      UpperLimit	      "0.5"
+      LowerLimitSource	      "Dialog"
+      LowerLimit	      "-0.5"
+      LinearizeAsGain	      on
+      ZeroCross		      on
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+    }
+    Block {
+      BlockType		      Stop
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      DataTypeOverrideAppliesTo	"AllNumericTypes"
+      MinMaxOverflowLogging   "UseLocalSettings"
+      Variant		      off
+      GeneratePreprocessorConditionals off
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      AccumDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Switch
+      Criteria		      "u2 >= Threshold"
+      Threshold		      "0"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      ZeroCross		      on
+      SampleTime	      "-1"
+      AllowDiffInputSizes     off
+    }
+    Block {
+      BlockType		      Terminator
+    }
+    Block {
+      BlockType		      UnitDelay
+      X0		      "0"
+      InputProcessing	      "Inherited"
+      SampleTime	      "1"
+      StateMustResolveToSignalObject off
+      RTWStateStorageClass    "Auto"
+    }
+  }
+  System {
+    Name		    "RoboSoccer_10b"
+    Location		    [2, 82, 1910, 1124]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "103"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    "632"
+    Block {
+      BlockType		      SubSystem
+      Name		      "2D Visualization"
+      SID		      "549"
+      Ports		      [1]
+      Position		      [1170, 319, 1370, 461]
+      FontName		      "Arial"
+      FontSize		      18
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      MaskDisplay	      "image(imread('texture\\3D_visualization.jpg'));"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"2D Visualization"
+	Location		[0, 82, 630, 744]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"107"
+	Block {
+	  BlockType		  Inport
+	  Name			  "In1"
+	  SID			  "569"
+	  Position		  [15, 253, 45, 267]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux"
+	  SID			  "568"
+	  Ports			  [1, 6]
+	  Position		  [140, 15, 150, 505]
+	  ShowName		  off
+	  Outputs		  "6"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "VR Signal Expander"
+	  SID			  "519"
+	  Ports			  [1, 1]
+	  Position		  [220, 41, 315, 79]
+	  LibraryVersion	  "1.241"
+	  SourceBlock		  "vrlib/VR Signal Expander"
+	  SourceType		  "VR Signal Expander"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  GeneratePreprocessorConditionals off
+	  outwidth		  "3"
+	  outidx		  "[1 2]"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "VR Signal Expander1"
+	  SID			  "520"
+	  Ports			  [1, 1]
+	  Position		  [220, 121, 315, 159]
+	  LibraryVersion	  "1.241"
+	  SourceBlock		  "vrlib/VR Signal Expander"
+	  SourceType		  "VR Signal Expander"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  GeneratePreprocessorConditionals off
+	  outwidth		  "3"
+	  outidx		  "[1 2]"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "VR Signal Expander2"
+	  SID			  "521"
+	  Ports			  [1, 1]
+	  Position		  [220, 201, 315, 239]
+	  LibraryVersion	  "1.241"
+	  SourceBlock		  "vrlib/VR Signal Expander"
+	  SourceType		  "VR Signal Expander"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  GeneratePreprocessorConditionals off
+	  outwidth		  "3"
+	  outidx		  "[1 2]"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "VR Signal Expander3"
+	  SID			  "522"
+	  Ports			  [1, 1]
+	  Position		  [220, 281, 315, 319]
+	  LibraryVersion	  "1.241"
+	  SourceBlock		  "vrlib/VR Signal Expander"
+	  SourceType		  "VR Signal Expander"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  GeneratePreprocessorConditionals off
+	  outwidth		  "3"
+	  outidx		  "[1 2]"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "VR Signal Expander4"
+	  SID			  "523"
+	  Ports			  [1, 1]
+	  Position		  [220, 361, 315, 399]
+	  LibraryVersion	  "1.241"
+	  SourceBlock		  "vrlib/VR Signal Expander"
+	  SourceType		  "VR Signal Expander"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  GeneratePreprocessorConditionals off
+	  outwidth		  "3"
+	  outidx		  "[1 2]"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "VR Sink"
+	  SID			  "570"
+	  Ports			  [6]
+	  Position		  [360, 21, 525, 499]
+	  InstantiateOnLoad	  on
+	  LibraryVersion	  "1.241"
+	  FontName		  "Arial"
+	  SourceBlock		  "vrlib/VR Sink"
+	  SourceType		  "Virtual Reality Sink"
+	  SampleTime		  "0.01"
+	  ViewEnable		  on
+	  RemoteChange		  off
+	  RemoteView		  on
+	  FieldsWritten		  "Ball.translation.3.1.1.double#Robot_1.translation.3.1.1.double#Robot_2.translation.3.1.1.double#R"
+	  "obot_3.translation.3.1.1.double#Robot_4.translation.3.1.1.double#GOAL.translation.3.1.1.double"
+	  WorldFileName		  "robosoccer.WRL"
+	  WorldDescription	  "Robot Soccer Simulator"
+	  AutoView		  on
+	  VideoDimensions	  "[]"
+	}
+	Line {
+	  SrcBlock		  "VR Signal Expander"
+	  SrcPort		  1
+	  DstBlock		  "VR Sink"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "VR Signal Expander1"
+	  SrcPort		  1
+	  DstBlock		  "VR Sink"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "VR Signal Expander2"
+	  SrcPort		  1
+	  DstBlock		  "VR Sink"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "VR Signal Expander4"
+	  SrcPort		  1
+	  DstBlock		  "VR Sink"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "In1"
+	  SrcPort		  1
+	  DstBlock		  "Demux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  5
+	  DstBlock		  "VR Signal Expander4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  4
+	  DstBlock		  "VR Signal Expander3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  3
+	  DstBlock		  "VR Signal Expander2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  2
+	  DstBlock		  "VR Signal Expander1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  1
+	  DstBlock		  "VR Signal Expander"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "VR Signal Expander3"
+	  SrcPort		  1
+	  DstBlock		  "VR Sink"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  6
+	  DstBlock		  "VR Sink"
+	  DstPort		  6
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Ball Dynamics"
+      SID		      "16"
+      Ports		      [1, 3]
+      Position		      [835, 427, 985, 553]
+      LibraryVersion	      "1.216"
+      FontName		      "Arial"
+      FontSize		      18
+      TreatAsAtomicUnit	      on
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      MaskDisplay	      "image(imread('texture\\soccer_ball_dynamics.jpg'));"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"Ball Dynamics"
+	Location		[19, 265, 895, 603]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"125"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Robot Position"
+	  SID			  "17"
+	  Position		  [25, 103, 55, 117]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "1/mass"
+	  SID			  "297"
+	  Position		  [355, 65, 385, 95]
+	  Gain			  "1/0.01"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  BusToVector
+	  Name			  "Bus to Vector"
+	  SID			  "632"
+	  Position		  [75, 88, 105, 132]
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Collision Modeling"
+	  SID			  "44"
+	  Ports			  [3, 2]
+	  Position		  [135, 44, 300, 176]
+	  LibraryVersion	  "1.31"
+	  PermitHierarchicalResolution "ExplicitOnly"
+	  TreatAsAtomicUnit	  on
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    0
+	    PropName		    "AvailSigsLoadSave"
+	  }
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskType		  "Stateflow"
+	  MaskDescription	  "Embedded MATLAB block"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('fcn');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  off
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "Collision Modeling"
+	    Location		    [257, 457, 812, 717]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SIDHighWatermark	    "26"
+	    SIDPrevWatermark	    "17"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "ball_velocity"
+	      SID		      "44::22"
+	      Position		      [20, 101, 40, 119]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "robot_position"
+	      SID		      "44::1"
+	      Position		      [20, 136, 40, 154]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "ball_position"
+	      SID		      "44::18"
+	      Position		      [20, 171, 40, 189]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      " Demux "
+	      SID		      "44::24"
+	      Ports		      [1, 1]
+	      Position		      [270, 180, 320, 220]
+	      Outputs		      "1"
+	    }
+	    Block {
+	      BlockType		      "S-Function"
+	      Name		      " SFunction "
+	      SID		      "44::23"
+	      Tag		      "Stateflow S-Function RoboSoccer_10b 2"
+	      Ports		      [3, 3]
+	      Position		      [180, 100, 230, 180]
+	      FunctionName	      "sf_sfun"
+	      PortCounts	      "[3 3]"
+	      EnableBusSupport	      on
+	      Port {
+		PortNumber		2
+		Name			"force"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		3
+		Name			"goal"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      " Terminator "
+	      SID		      "44::26"
+	      Position		      [460, 191, 480, 209]
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "force"
+	      SID		      "44::5"
+	      Position		      [460, 101, 480, 119]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "goal"
+	      SID		      "44::19"
+	      Position		      [460, 136, 480, 154]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      " SFunction "
+	      SrcPort		      1
+	      DstBlock		      " Demux "
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "ball_velocity"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "robot_position"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "ball_position"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      3
+	    }
+	    Line {
+	      Name		      "force"
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      2
+	      DstBlock		      "force"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "goal"
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      3
+	      DstBlock		      "goal"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      " Demux "
+	      SrcPort		      1
+	      DstBlock		      " Terminator "
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Position"
+	  SID			  "187"
+	  Ports			  [1, 1]
+	  Position		  [535, 65, 565, 95]
+	  InitialCondition	  "[100;50]"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "TEXT_GOAL"
+	  SID			  "560"
+	  Ports			  [1, 1]
+	  Position		  [390, 228, 470, 262]
+	  FontName		  "Arial"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "TEXT_GOAL"
+	    Location		    [348, 243, 675, 524]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "124"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      SID		      "561"
+	      Position		      [20, 93, 50, 107]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant"
+	      SID		      "562"
+	      Position		      [20, 13, 55, 87]
+	      NamePlacement	      "alternate"
+	      Value		      "[45;40;1.9]"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant1"
+	      SID		      "563"
+	      Position		      [25, 123, 60, 197]
+	      Value		      "[45;40;-1.9]"
+	    }
+	    Block {
+	      BlockType		      Switch
+	      Name		      "Switch"
+	      SID		      "564"
+	      Position		      [125, 73, 175, 127]
+	      Criteria		      "u2 ~= 0"
+	      Threshold		      "1"
+	      InputSameDT	      off
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      SID		      "565"
+	      Position		      [200, 93, 230, 107]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "In1"
+	      SrcPort		      1
+	      DstBlock		      "Switch"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Switch"
+	      SrcPort		      1
+	      DstBlock		      "Out1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Constant"
+	      SrcPort		      1
+	      Points		      [25, 0; 0, 30]
+	      DstBlock		      "Switch"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Constant1"
+	      SrcPort		      1
+	      Points		      [20, 0; 0, -40]
+	      DstBlock		      "Switch"
+	      DstPort		      3
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  UnitDelay
+	  Name			  "Unit Delay"
+	  SID			  "544"
+	  Position		  [390, 128, 425, 162]
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Velocity"
+	  SID			  "188"
+	  Ports			  [1, 1]
+	  Position		  [450, 65, 480, 95]
+	  InitialCondition	  "[0;0]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Ball Position"
+	  SID			  "18"
+	  Position		  [655, 73, 685, 87]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Text_Goal"
+	  SID			  "567"
+	  Position		  [655, 238, 685, 252]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "GOAL"
+	  SID			  "55"
+	  Position		  [470, 138, 500, 152]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Robot Position"
+	  SrcPort		  1
+	  DstBlock		  "Bus to Vector"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Velocity"
+	  SrcPort		  1
+	  Points		  [30, 0]
+	  Branch {
+	    DstBlock		    "Position"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -55; -465, 0; 0, 40]
+	    DstBlock		    "Collision Modeling"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Position"
+	  SrcPort		  1
+	  Points		  [50, 0]
+	  Branch {
+	    DstBlock		    "Ball Position"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 135; -570, 0; 0, -60]
+	    DstBlock		    "Collision Modeling"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  SrcBlock		  "Collision Modeling"
+	  SrcPort		  1
+	  DstBlock		  "1/mass"
+	  DstPort		  1
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "1/mass"
+	  SrcPort		  1
+	  DstBlock		  "Velocity"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Collision Modeling"
+	  SrcPort		  2
+	  Points		  [15, 0]
+	  Branch {
+	    DstBlock		    "Unit Delay"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 100]
+	    DstBlock		    "TEXT_GOAL"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Unit Delay"
+	  SrcPort		  1
+	  DstBlock		  "GOAL"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "TEXT_GOAL"
+	  SrcPort		  1
+	  DstBlock		  "Text_Goal"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Bus to Vector"
+	  SrcPort		  1
+	  DstBlock		  "Collision Modeling"
+	  DstPort		  2
+	}
+      }
+    }
+    Block {
+      BlockType		      BusCreator
+      Name		      "Bus\nCreator1"
+      SID		      "48"
+      Ports		      [4, 1]
+      Position		      [665, 409, 680, 571]
+      ShowName		      off
+      DisplayOption	      "bar"
+      OutDataTypeStr	      "Bus: Bus_Robot_Positions"
+    }
+    Block {
+      BlockType		      BusCreator
+      Name		      "Bus\nCreator2"
+      SID		      "49"
+      Ports		      [2, 1]
+      Position		      [670, 714, 685, 876]
+      ShowName		      off
+      Inputs		      "2"
+      DisplayOption	      "bar"
+      OutDataTypeStr	      "Bus: Bus_Power"
+    }
+    Block {
+      BlockType		      BusCreator
+      Name		      "Bus\nCreator3"
+      SID		      "50"
+      Ports		      [2, 1]
+      Position		      [665, 94, 680, 256]
+      ShowName		      off
+      Inputs		      "2"
+      DisplayOption	      "bar"
+      OutDataTypeStr	      "Bus: Bus_Power"
+    }
+    Block {
+      BlockType		      BusCreator
+      Name		      "Bus\nCreator4"
+      SID		      "51"
+      Ports		      [2, 1]
+      Position		      [1050, 91, 1065, 264]
+      ShowName		      off
+      Inputs		      "2"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      BusCreator
+      Name		      "Bus\nCreator5"
+      SID		      "52"
+      Ports		      [2, 1]
+      Position		      [1050, 706, 1065, 884]
+      ShowName		      off
+      Inputs		      "2"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      BusCreator
+      Name		      "Bus\nCreator6"
+      SID		      "290"
+      Ports		      [3, 1]
+      Position		      [1075, 296, 1085, 484]
+      ShowName		      off
+      Inputs		      "3"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      BusSelector
+      Name		      "Bus\nSelector"
+      SID		      "53"
+      Ports		      [1, 2]
+      Position		      [90, 139, 105, 261]
+      ShowName		      off
+      OutputSignals	      "signal1,signal2"
+      Port {
+	PortNumber		1
+	Name			"<signal1>"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		2
+	Name			"<signal2>"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      BusSelector
+      Name		      "Bus\nSelector1"
+      SID		      "54"
+      Ports		      [1, 2]
+      Position		      [110, 739, 125, 861]
+      ShowName		      off
+      OutputSignals	      "signal1,signal2"
+      Port {
+	PortNumber		1
+	Name			"<signal1>"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		2
+	Name			"<signal2>"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "CLICK TO READ ME"
+      SID		      "594"
+      Ports		      []
+      Position		      [1236, 810, 1380, 915]
+      ForegroundColor	      "magenta"
+      BackgroundColor	      "magenta"
+      LibraryVersion	      "1.225"
+      UserDataPersistent      on
+      UserData		      "DataTag0"
+      FontName		      "Arial"
+      FontSize		      28
+      SourceBlock	      "simulink/Model-Wide\nUtilities/DocBlock"
+      SourceType	      "DocBlock"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      GeneratePreprocessorConditionals off
+      DocumentType	      "Text"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Robot 1 Dynamics"
+      SID		      "67"
+      Ports		      [1, 2]
+      Position		      [230, 39, 435, 166]
+      CloseFcn		      "if P<0                                      \n    error('P cannot be less than 0');       \nend"
+      "                                         \nif P>1                                      \n    error('P cannot be "
+      "greater than 1');    \nend                                         \n                                           "
+      " \nif sigma<0                                  \n    error('sigma cannot be less than 0');   \nend              "
+      "                           \n                                            \nif sigma>1                           "
+      "       \n    error('sigma cannot be greater than 1');\nend                                         "
+      FontName		      "Arial"
+      FontSize		      18
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      MaskType		      "Robot Parameters"
+      MaskDescription	      "Set the robot stamina to a value between 0.1 and 1. Note that a higher value of stamina c"
+      "orresponds to more battery power which inversely impacts the mass of the robot. This will reduce its agility.\n\n"
+      "Likewise, higher values of accuracy will come at a cost of higher rates of discharge for the battery pack.\n\nCh"
+      "oose values carefully to reflect these tradeoffs."
+      MaskHelp		      "Set the robot stamina to a value between 0.1 and 1. Note that a higher value of stamina corresp"
+      "onds to more battery power which inversely impacts the mass of the robot. This will reduce its agility.\n\nLikew"
+      "ise, higher values of accuracy will come at a cost of higher rates of discharge for the battery pack.\n\nChoose "
+      "values carefully to reflect these tradeoffs."
+      MaskPromptString	      "Stamina (Enter value between 0 and 1)|Actuator_saturation"
+      MaskStyleString	      "edit,edit"
+      MaskVariables	      "P=@1;saturate_value=&2;"
+      MaskTunableValueString  "on,off"
+      MaskCallbackString      "\n    \n    |saturate_value=10;"
+      MaskEnableString	      "on,off"
+      MaskVisibilityString    "on,off"
+      MaskToolTipString	      "on,on"
+      MaskInitialization      "saturate_value=300;"
+      MaskDisplay	      "patch([0 1 1 0], [0.75 0.75 1   1  ], [1 0 0]);\npatch([0 1 1 0], [0.25 0.25 0.75 0.75], [1 1"
+      " 0]);\npatch([0 1 1 0], [0   0   0.25 0.25], [1 0 0]);"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "0.5|0"
+      System {
+	Name			"Robot 1 Dynamics"
+	Location		[106, 122, 1011, 560]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"146"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Actuator Force"
+	  SID			  "103"
+	  Position		  [25, 158, 55, 172]
+	  NamePlacement		  "alternate"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Abs
+	  Name			  "Abs"
+	  SID			  "456"
+	  Position		  [240, 160, 270, 190]
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Acceleration"
+	  SID			  "69"
+	  Position		  [235, 42, 290, 88]
+	  Gain			  "1/(10*P+1)"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "B"
+	  SID			  "545"
+	  Position		  [235, 16, 290, 44]
+	  BlockMirror		  on
+	  NamePlacement		  "alternate"
+	  Gain			  "-2"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Boundary Collisons"
+	  SID			  "108"
+	  Ports			  [1, 1]
+	  Position		  [50, 48, 175, 82]
+	  LibraryVersion	  "1.31"
+	  FontName		  "Arial"
+	  FontSize		  8
+	  PermitHierarchicalResolution "ExplicitOnly"
+	  TreatAsAtomicUnit	  on
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    0
+	    PropName		    "AvailSigsLoadSave"
+	  }
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskType		  "Stateflow"
+	  MaskDescription	  "Embedded MATLAB block"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('fcn');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  off
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "Boundary Collisons"
+	    Location		    [257, 457, 812, 717]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SIDHighWatermark	    "21"
+	    SIDPrevWatermark	    "13"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "robot_position"
+	      SID		      "108::1"
+	      Position		      [20, 101, 40, 119]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      " Demux "
+	      SID		      "108::19"
+	      Ports		      [1, 1]
+	      Position		      [270, 160, 320, 200]
+	      Outputs		      "1"
+	    }
+	    Block {
+	      BlockType		      "S-Function"
+	      Name		      " SFunction "
+	      SID		      "108::18"
+	      Tag		      "Stateflow S-Function RoboSoccer_10b 3"
+	      Ports		      [1, 2]
+	      Position		      [180, 100, 230, 160]
+	      FunctionName	      "sf_sfun"
+	      PortCounts	      "[1 2]"
+	      EnableBusSupport	      on
+	      Port {
+		PortNumber		2
+		Name			"collision_force"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      " Terminator "
+	      SID		      "108::21"
+	      Position		      [460, 171, 480, 189]
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "collision_force"
+	      SID		      "108::5"
+	      Position		      [460, 101, 480, 119]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      " SFunction "
+	      SrcPort		      1
+	      DstBlock		      " Demux "
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "robot_position"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "collision_force"
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      2
+	      DstBlock		      "collision_force"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      " Demux "
+	      SrcPort		      1
+	      DstBlock		      " Terminator "
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Compare\nTo Constant"
+	  SID			  "457"
+	  Ports			  [1, 1]
+	  Position		  [200, 222, 235, 258]
+	  BlockMirror		  on
+	  LibraryVersion	  "1.225"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+	  SourceType		  "Compare To Constant"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  GeneratePreprocessorConditionals off
+	  relop			  ">"
+	  const			  "[0;0]"
+	  LogicOutDataTypeMode	  "uint8"
+	  ZeroCross		  on
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Energy Loss Calculation"
+	  SID			  "100"
+	  Ports			  [1, 1]
+	  Position		  [390, 160, 420, 190]
+	  InitialCondition	  "1000*[P; P]"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Position"
+	  SID			  "71"
+	  Ports			  [1, 1]
+	  Position		  [390, 50, 420, 80]
+	  InitialCondition	  "[50; 75]"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  SID			  "458"
+	  Ports			  [2, 1]
+	  Position		  [95, 157, 125, 188]
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Rate of Discharge"
+	  SID			  "102"
+	  Position		  [305, 152, 360, 198]
+	  Gain			  "-0.01"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Saturate
+	  Name			  "Saturation"
+	  SID			  "104"
+	  Ports			  [1, 1]
+	  Position		  [150, 160, 180, 190]
+	  InputPortMap		  "u0"
+	  UpperLimit		  "saturate_value"
+	  LowerLimit		  "-saturate_value"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  SID			  "107"
+	  Ports			  [3, 1]
+	  Position		  [195, 55, 215, 75]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "+++"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Velocity"
+	  SID			  "70"
+	  Ports			  [1, 1]
+	  Position		  [320, 50, 350, 80]
+	  InitialCondition	  "[0;0]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Robot Position"
+	  SID			  "73"
+	  Position		  [525, 58, 555, 72]
+	  IconDisplay		  "Port number"
+	  PortDimensions	  "[2 1]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Energy"
+	  SID			  "74"
+	  Position		  [525, 168, 555, 182]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  PortDimensions	  "[2 1]"
+	}
+	Line {
+	  SrcBlock		  "Acceleration"
+	  SrcPort		  1
+	  DstBlock		  "Velocity"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Velocity"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  Branch {
+	    DstBlock		    "Position"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -35]
+	    DstBlock		    "B"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Position"
+	  SrcPort		  1
+	  Points		  [30, 0]
+	  Branch {
+	    Points		    [0, -60; -420, 0]
+	    DstBlock		    "Boundary Collisons"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Robot Position"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Energy Loss Calculation"
+	  SrcPort		  1
+	  Points		  [65, 0]
+	  Branch {
+	    DstBlock		    "Energy"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 65]
+	    DstBlock		    "Compare\nTo Constant"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Rate of Discharge"
+	  SrcPort		  1
+	  DstBlock		  "Energy Loss Calculation"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Saturation"
+	  SrcPort		  1
+	  Points		  [20, 0]
+	  Branch {
+	    DstBlock		    "Abs"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Sum"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  SrcBlock		  "Abs"
+	  SrcPort		  1
+	  DstBlock		  "Rate of Discharge"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Actuator Force"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  DstBlock		  "Saturation"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Compare\nTo Constant"
+	  SrcPort		  1
+	  Points		  [-145, 0; 0, -60]
+	  DstBlock		  "Product"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Boundary Collisons"
+	  SrcPort		  1
+	  DstBlock		  "Sum"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  DstBlock		  "Acceleration"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "B"
+	  SrcPort		  1
+	  Points		  [-25, 0]
+	  DstBlock		  "Sum"
+	  DstPort		  1
+	}
+	Annotation {
+	  Position		  [131, 154]
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Robot 2 Dynamics"
+      SID		      "459"
+      Ports		      [1, 2]
+      Position		      [230, 209, 435, 336]
+      CloseFcn		      "if P<0                                      \n    error('P cannot be less than 0');       \nend"
+      "                                         \nif P>1                                      \n    error('P cannot be "
+      "greater than 1');    \nend                                         \n                                           "
+      " \nif sigma<0                                  \n    error('sigma cannot be less than 0');   \nend              "
+      "                           \n                                            \nif sigma>1                           "
+      "       \n    error('sigma cannot be greater than 1');\nend                                         "
+      FontName		      "Arial"
+      FontSize		      18
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      MaskType		      "Robot Parameters"
+      MaskDescription	      "Set the robot stamina to a value between 0.1 and 1. Note that a higher value of stamina c"
+      "orresponds to more battery power which inversely impacts the mass of the robot. This will reduce its agility.\n\n"
+      "Likewise, higher values of accuracy will come at a cost of higher rates of discharge for the battery pack.\n\nCh"
+      "oose values carefully to reflect these tradeoffs."
+      MaskHelp		      "Set the robot stamina to a value between 0.1 and 1. Note that a higher value of stamina corresp"
+      "onds to more battery power which inversely impacts the mass of the robot. This will reduce its agility.\n\nLikew"
+      "ise, higher values of accuracy will come at a cost of higher rates of discharge for the battery pack.\n\nChoose "
+      "values carefully to reflect these tradeoffs."
+      MaskPromptString	      "Stamina (Enter value between 0 and 1)|Actuator_saturation"
+      MaskStyleString	      "edit,edit"
+      MaskVariables	      "P=@1;saturate_value=&2;"
+      MaskTunableValueString  "on,off"
+      MaskCallbackString      "\n    \n    |saturate_value=10;"
+      MaskEnableString	      "on,off"
+      MaskVisibilityString    "on,off"
+      MaskToolTipString	      "on,on"
+      MaskInitialization      "saturate_value=300;"
+      MaskDisplay	      "patch([0 1 1 0], [0.75 0.75 1   1  ], [1 0 0]);\npatch([0 1 1 0], [0.25 0.25 0.75 0.75], [1 1"
+      " 0]);\npatch([0 1 1 0], [0   0   0.25 0.25], [1 0 0]);"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "0.5|0"
+      System {
+	Name			"Robot 2 Dynamics"
+	Location		[-4, 96, 796, 500]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"135"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Actuator Force"
+	  SID			  "460"
+	  Position		  [15, 173, 45, 187]
+	  NamePlacement		  "alternate"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Abs
+	  Name			  "Abs"
+	  SID			  "461"
+	  Position		  [240, 175, 270, 205]
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Acceleration"
+	  SID			  "462"
+	  Position		  [235, 57, 290, 103]
+	  Gain			  "1/(10*P+0.1)"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "B"
+	  SID			  "546"
+	  Position		  [235, 21, 290, 49]
+	  BlockMirror		  on
+	  NamePlacement		  "alternate"
+	  Gain			  "-2"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Boundary Collisons"
+	  SID			  "463"
+	  Ports			  [1, 1]
+	  Position		  [50, 63, 175, 97]
+	  LibraryVersion	  "1.31"
+	  FontName		  "Arial"
+	  FontSize		  8
+	  PermitHierarchicalResolution "ExplicitOnly"
+	  TreatAsAtomicUnit	  on
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    0
+	    PropName		    "AvailSigsLoadSave"
+	  }
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskType		  "Stateflow"
+	  MaskDescription	  "Embedded MATLAB block"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('fcn');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  off
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "Boundary Collisons"
+	    Location		    [257, 457, 812, 717]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SIDHighWatermark	    "21"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "robot_position"
+	      SID		      "463::1"
+	      Position		      [20, 101, 40, 119]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      " Demux "
+	      SID		      "463::19"
+	      Ports		      [1, 1]
+	      Position		      [270, 160, 320, 200]
+	      Outputs		      "1"
+	    }
+	    Block {
+	      BlockType		      "S-Function"
+	      Name		      " SFunction "
+	      SID		      "463::18"
+	      Tag		      "Stateflow S-Function RoboSoccer_10b 6"
+	      Ports		      [1, 2]
+	      Position		      [180, 100, 230, 160]
+	      FunctionName	      "sf_sfun"
+	      PortCounts	      "[1 2]"
+	      EnableBusSupport	      on
+	      Port {
+		PortNumber		2
+		Name			"collision_force"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      " Terminator "
+	      SID		      "463::21"
+	      Position		      [460, 171, 480, 189]
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "collision_force"
+	      SID		      "463::5"
+	      Position		      [460, 101, 480, 119]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      " SFunction "
+	      SrcPort		      1
+	      DstBlock		      " Demux "
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "robot_position"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "collision_force"
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      2
+	      DstBlock		      "collision_force"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      " Demux "
+	      SrcPort		      1
+	      DstBlock		      " Terminator "
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Compare\nTo Constant"
+	  SID			  "464"
+	  Ports			  [1, 1]
+	  Position		  [200, 240, 230, 270]
+	  BlockMirror		  on
+	  LibraryVersion	  "1.225"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+	  SourceType		  "Compare To Constant"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  GeneratePreprocessorConditionals off
+	  relop			  ">"
+	  const			  "[0;0]"
+	  LogicOutDataTypeMode	  "uint8"
+	  ZeroCross		  on
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Energy Loss Calculation"
+	  SID			  "465"
+	  Ports			  [1, 1]
+	  Position		  [410, 175, 440, 205]
+	  InitialCondition	  "1000*[P; P]"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Position"
+	  SID			  "466"
+	  Ports			  [1, 1]
+	  Position		  [390, 65, 420, 95]
+	  InitialCondition	  "[50; 25]"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  SID			  "467"
+	  Ports			  [2, 1]
+	  Position		  [95, 172, 125, 203]
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Rate of Discharge"
+	  SID			  "468"
+	  Position		  [305, 167, 360, 213]
+	  Gain			  "-0.01"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Saturate
+	  Name			  "Saturation"
+	  SID			  "469"
+	  Ports			  [1, 1]
+	  Position		  [150, 175, 180, 205]
+	  InputPortMap		  "u0"
+	  UpperLimit		  "saturate_value"
+	  LowerLimit		  "-saturate_value"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  SID			  "470"
+	  Ports			  [3, 1]
+	  Position		  [190, 70, 210, 90]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "+++"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Velocity"
+	  SID			  "471"
+	  Ports			  [1, 1]
+	  Position		  [320, 65, 350, 95]
+	  InitialCondition	  "[0;0]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Robot Position"
+	  SID			  "472"
+	  Position		  [525, 73, 555, 87]
+	  IconDisplay		  "Port number"
+	  PortDimensions	  "[2 1]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Energy"
+	  SID			  "473"
+	  Position		  [525, 183, 555, 197]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  PortDimensions	  "[2 1]"
+	}
+	Line {
+	  SrcBlock		  "Compare\nTo Constant"
+	  SrcPort		  1
+	  Points		  [-145, 0; 0, -60]
+	  DstBlock		  "Product"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  DstBlock		  "Saturation"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Actuator Force"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Abs"
+	  SrcPort		  1
+	  DstBlock		  "Rate of Discharge"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Saturation"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    DstBlock		    "Abs"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Sum"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  SrcBlock		  "Rate of Discharge"
+	  SrcPort		  1
+	  DstBlock		  "Energy Loss Calculation"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Energy Loss Calculation"
+	  SrcPort		  1
+	  Points		  [45, 0]
+	  Branch {
+	    Points		    [0, 65]
+	    DstBlock		    "Compare\nTo Constant"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Energy"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Position"
+	  SrcPort		  1
+	  Points		  [30, 0]
+	  Branch {
+	    DstBlock		    "Robot Position"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -75; -420, 0]
+	    DstBlock		    "Boundary Collisons"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Velocity"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    DstBlock		    "Position"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -45]
+	    DstBlock		    "B"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Acceleration"
+	  SrcPort		  1
+	  DstBlock		  "Velocity"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  DstBlock		  "Acceleration"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Boundary Collisons"
+	  SrcPort		  1
+	  DstBlock		  "Sum"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "B"
+	  SrcPort		  1
+	  Points		  [-30, 0]
+	  DstBlock		  "Sum"
+	  DstPort		  1
+	}
+	Annotation {
+	  Position		  [131, 169]
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Robot 3 Dynamics"
+      SID		      "488"
+      Ports		      [1, 2]
+      Position		      [230, 659, 435, 786]
+      CloseFcn		      "if P<0                                      \n    error('P cannot be less than 0');       \nend"
+      "                                         \nif P>1                                      \n    error('P cannot be "
+      "greater than 1');    \nend                                         \n                                           "
+      " \nif sigma<0                                  \n    error('sigma cannot be less than 0');   \nend              "
+      "                           \n                                            \nif sigma>1                           "
+      "       \n    error('sigma cannot be greater than 1');\nend                                         "
+      FontName		      "Arial"
+      FontSize		      18
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      MaskType		      "Robot Parameters"
+      MaskDescription	      "Set the robot stamina to a value between 0.1 and 1. Note that a higher value of stamina c"
+      "orresponds to more battery power which inversely impacts the mass of the robot. This will reduce its agility.\n\n"
+      "Likewise, higher values of accuracy will come at a cost of higher rates of discharge for the battery pack.\n\nCh"
+      "oose values carefully to reflect these tradeoffs."
+      MaskHelp		      "Set the robot stamina to a value between 0.1 and 1. Note that a higher value of stamina corresp"
+      "onds to more battery power which inversely impacts the mass of the robot. This will reduce its agility.\n\nLikew"
+      "ise, higher values of accuracy will come at a cost of higher rates of discharge for the battery pack.\n\nChoose "
+      "values carefully to reflect these tradeoffs."
+      MaskPromptString	      "Stamina (Enter value between 0 and 1)|Actuator_saturation"
+      MaskStyleString	      "edit,edit"
+      MaskVariables	      "P=@1;saturate_value=&2;"
+      MaskTunableValueString  "on,off"
+      MaskCallbackString      "\n    \n    |saturate_value=10;"
+      MaskEnableString	      "on,off"
+      MaskVisibilityString    "on,off"
+      MaskToolTipString	      "on,on"
+      MaskInitialization      "saturate_value=300;"
+      MaskDisplay	      "patch([0 1 1 0], [2/3 2/3 1   1  ], [1 0 0]);\npatch([0 1 1 0], [0   0   1/3 1/3], [0 0 1]);"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "0.5|0"
+      System {
+	Name			"Robot 3 Dynamics"
+	Location		[4, 97, 794, 489]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"129"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Actuator Force"
+	  SID			  "489"
+	  Position		  [35, 163, 65, 177]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Abs
+	  Name			  "Abs"
+	  SID			  "490"
+	  Position		  [260, 165, 290, 195]
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Acceleration"
+	  SID			  "491"
+	  Position		  [255, 47, 310, 93]
+	  Gain			  "1/(10*P+1)"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "B"
+	  SID			  "547"
+	  Position		  [250, 16, 305, 44]
+	  BlockMirror		  on
+	  NamePlacement		  "alternate"
+	  Gain			  "-2"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Boundary Collisons"
+	  SID			  "492"
+	  Ports			  [1, 1]
+	  Position		  [70, 53, 195, 87]
+	  LibraryVersion	  "1.31"
+	  FontName		  "Arial"
+	  FontSize		  8
+	  PermitHierarchicalResolution "ExplicitOnly"
+	  TreatAsAtomicUnit	  on
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    0
+	    PropName		    "AvailSigsLoadSave"
+	  }
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskType		  "Stateflow"
+	  MaskDescription	  "Embedded MATLAB block"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('fcn');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  off
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "Boundary Collisons"
+	    Location		    [257, 457, 812, 717]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SIDHighWatermark	    "21"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "robot_position"
+	      SID		      "492::1"
+	      Position		      [20, 101, 40, 119]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      " Demux "
+	      SID		      "492::19"
+	      Ports		      [1, 1]
+	      Position		      [270, 160, 320, 200]
+	      Outputs		      "1"
+	    }
+	    Block {
+	      BlockType		      "S-Function"
+	      Name		      " SFunction "
+	      SID		      "492::18"
+	      Tag		      "Stateflow S-Function RoboSoccer_10b 5"
+	      Ports		      [1, 2]
+	      Position		      [180, 100, 230, 160]
+	      FunctionName	      "sf_sfun"
+	      PortCounts	      "[1 2]"
+	      EnableBusSupport	      on
+	      Port {
+		PortNumber		2
+		Name			"collision_force"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      " Terminator "
+	      SID		      "492::21"
+	      Position		      [460, 171, 480, 189]
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "collision_force"
+	      SID		      "492::5"
+	      Position		      [460, 101, 480, 119]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      " SFunction "
+	      SrcPort		      1
+	      DstBlock		      " Demux "
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "robot_position"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "collision_force"
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      2
+	      DstBlock		      "collision_force"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      " Demux "
+	      SrcPort		      1
+	      DstBlock		      " Terminator "
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Compare\nTo Constant"
+	  SID			  "493"
+	  Ports			  [1, 1]
+	  Position		  [220, 230, 250, 260]
+	  BlockMirror		  on
+	  LibraryVersion	  "1.225"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+	  SourceType		  "Compare To Constant"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  GeneratePreprocessorConditionals off
+	  relop			  ">"
+	  const			  "[0;0]"
+	  LogicOutDataTypeMode	  "uint8"
+	  ZeroCross		  on
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Energy Loss Calculation"
+	  SID			  "494"
+	  Ports			  [1, 1]
+	  Position		  [430, 165, 460, 195]
+	  InitialCondition	  "1000*[P; P]"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Position"
+	  SID			  "495"
+	  Ports			  [1, 1]
+	  Position		  [410, 55, 440, 85]
+	  InitialCondition	  "[150; 75]"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  SID			  "496"
+	  Ports			  [2, 1]
+	  Position		  [115, 162, 145, 193]
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Rate of Discharge"
+	  SID			  "497"
+	  Position		  [325, 157, 380, 203]
+	  Gain			  "-0.01"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Saturate
+	  Name			  "Saturation"
+	  SID			  "498"
+	  Ports			  [1, 1]
+	  Position		  [170, 165, 200, 195]
+	  InputPortMap		  "u0"
+	  UpperLimit		  "saturate_value"
+	  LowerLimit		  "-saturate_value"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  SID			  "499"
+	  Ports			  [3, 1]
+	  Position		  [210, 60, 230, 80]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "+++"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Velocity"
+	  SID			  "500"
+	  Ports			  [1, 1]
+	  Position		  [340, 55, 370, 85]
+	  InitialCondition	  "[0;0]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Robot Position"
+	  SID			  "501"
+	  Position		  [545, 63, 575, 77]
+	  IconDisplay		  "Port number"
+	  PortDimensions	  "[2 1]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Energy"
+	  SID			  "502"
+	  Position		  [545, 173, 575, 187]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  PortDimensions	  "[2 1]"
+	}
+	Line {
+	  SrcBlock		  "Compare\nTo Constant"
+	  SrcPort		  1
+	  Points		  [-145, 0; 0, -60]
+	  DstBlock		  "Product"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  DstBlock		  "Saturation"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Actuator Force"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Abs"
+	  SrcPort		  1
+	  DstBlock		  "Rate of Discharge"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Saturation"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    DstBlock		    "Abs"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Sum"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  SrcBlock		  "Rate of Discharge"
+	  SrcPort		  1
+	  DstBlock		  "Energy Loss Calculation"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Energy Loss Calculation"
+	  SrcPort		  1
+	  Points		  [45, 0]
+	  Branch {
+	    Points		    [0, 65]
+	    DstBlock		    "Compare\nTo Constant"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Energy"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Position"
+	  SrcPort		  1
+	  Points		  [30, 0]
+	  Branch {
+	    DstBlock		    "Robot Position"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -60; -420, 0]
+	    DstBlock		    "Boundary Collisons"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Velocity"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    DstBlock		    "Position"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -40]
+	    DstBlock		    "B"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Acceleration"
+	  SrcPort		  1
+	  DstBlock		  "Velocity"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  DstBlock		  "Acceleration"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Boundary Collisons"
+	  SrcPort		  1
+	  DstBlock		  "Sum"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "B"
+	  SrcPort		  1
+	  Points		  [-25, 0]
+	  DstBlock		  "Sum"
+	  DstPort		  1
+	}
+	Annotation {
+	  Position		  [151, 159]
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Robot 4 Dynamics"
+      SID		      "503"
+      Ports		      [1, 2]
+      Position		      [230, 819, 435, 946]
+      CloseFcn		      "if P<0                                      \n    error('P cannot be less than 0');       \nend"
+      "                                         \nif P>1                                      \n    error('P cannot be "
+      "greater than 1');    \nend                                         \n                                           "
+      " \nif sigma<0                                  \n    error('sigma cannot be less than 0');   \nend              "
+      "                           \n                                            \nif sigma>1                           "
+      "       \n    error('sigma cannot be greater than 1');\nend                                         "
+      FontName		      "Arial"
+      FontSize		      18
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      MaskType		      "Robot Parameters"
+      MaskDescription	      "Set the robot stamina to a value between 0.1 and 1. Note that a higher value of stamina c"
+      "orresponds to more battery power which inversely impacts the mass of the robot. This will reduce its agility.\n\n"
+      "Likewise, higher values of accuracy will come at a cost of higher rates of discharge for the battery pack.\n\nCh"
+      "oose values carefully to reflect these tradeoffs."
+      MaskHelp		      "Set the robot stamina to a value between 0.1 and 1. Note that a higher value of stamina corresp"
+      "onds to more battery power which inversely impacts the mass of the robot. This will reduce its agility.\n\nLikew"
+      "ise, higher values of accuracy will come at a cost of higher rates of discharge for the battery pack.\n\nChoose "
+      "values carefully to reflect these tradeoffs."
+      MaskPromptString	      "Stamina (Enter value between 0 and 1)|Actuator_saturation"
+      MaskStyleString	      "edit,edit"
+      MaskVariables	      "P=@1;saturate_value=&2;"
+      MaskTunableValueString  "on,off"
+      MaskCallbackString      "\n    \n    |saturate_value=10;"
+      MaskEnableString	      "on,off"
+      MaskVisibilityString    "on,off"
+      MaskToolTipString	      "on,on"
+      MaskInitialization      "saturate_value=300;"
+      MaskDisplay	      "patch([0 1 1 0], [2/3 2/3 1   1  ], [1 0 0]);\npatch([0 1 1 0], [0   0   1/3 1/3], [0 0 1]);"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "0.5|0"
+      System {
+	Name			"Robot 4 Dynamics"
+	Location		[-3, 82, 808, 479]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"135"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Actuator Force"
+	  SID			  "504"
+	  Position		  [20, 168, 50, 182]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Abs
+	  Name			  "Abs"
+	  SID			  "505"
+	  Position		  [245, 170, 275, 200]
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Acceleration"
+	  SID			  "506"
+	  Position		  [240, 52, 295, 98]
+	  Gain			  "1/(10*P+1)"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "B"
+	  SID			  "548"
+	  Position		  [250, 21, 305, 49]
+	  BlockMirror		  on
+	  NamePlacement		  "alternate"
+	  Gain			  "-2"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Boundary Collisons"
+	  SID			  "507"
+	  Ports			  [1, 1]
+	  Position		  [55, 58, 180, 92]
+	  LibraryVersion	  "1.31"
+	  FontName		  "Arial"
+	  FontSize		  8
+	  PermitHierarchicalResolution "ExplicitOnly"
+	  TreatAsAtomicUnit	  on
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    0
+	    PropName		    "AvailSigsLoadSave"
+	  }
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskType		  "Stateflow"
+	  MaskDescription	  "Embedded MATLAB block"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('fcn');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  off
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "Boundary Collisons"
+	    Location		    [257, 457, 812, 717]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SIDHighWatermark	    "21"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "robot_position"
+	      SID		      "507::1"
+	      Position		      [20, 101, 40, 119]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      " Demux "
+	      SID		      "507::19"
+	      Ports		      [1, 1]
+	      Position		      [270, 160, 320, 200]
+	      Outputs		      "1"
+	    }
+	    Block {
+	      BlockType		      "S-Function"
+	      Name		      " SFunction "
+	      SID		      "507::18"
+	      Tag		      "Stateflow S-Function RoboSoccer_10b 4"
+	      Ports		      [1, 2]
+	      Position		      [180, 100, 230, 160]
+	      FunctionName	      "sf_sfun"
+	      PortCounts	      "[1 2]"
+	      EnableBusSupport	      on
+	      Port {
+		PortNumber		2
+		Name			"collision_force"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      " Terminator "
+	      SID		      "507::21"
+	      Position		      [460, 171, 480, 189]
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "collision_force"
+	      SID		      "507::5"
+	      Position		      [460, 101, 480, 119]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      " SFunction "
+	      SrcPort		      1
+	      DstBlock		      " Demux "
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "robot_position"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "collision_force"
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      2
+	      DstBlock		      "collision_force"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      " Demux "
+	      SrcPort		      1
+	      DstBlock		      " Terminator "
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Compare\nTo Constant"
+	  SID			  "508"
+	  Ports			  [1, 1]
+	  Position		  [205, 235, 235, 265]
+	  BlockMirror		  on
+	  LibraryVersion	  "1.225"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+	  SourceType		  "Compare To Constant"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  GeneratePreprocessorConditionals off
+	  relop			  ">"
+	  const			  "[0;0]"
+	  LogicOutDataTypeMode	  "uint8"
+	  ZeroCross		  on
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Energy Loss Calculation"
+	  SID			  "509"
+	  Ports			  [1, 1]
+	  Position		  [415, 170, 445, 200]
+	  InitialCondition	  "1000*[P; P]"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Position"
+	  SID			  "510"
+	  Ports			  [1, 1]
+	  Position		  [395, 60, 425, 90]
+	  InitialCondition	  "[150; 25]"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  SID			  "511"
+	  Ports			  [2, 1]
+	  Position		  [100, 167, 130, 198]
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Rate of Discharge"
+	  SID			  "512"
+	  Position		  [310, 162, 365, 208]
+	  Gain			  "-0.01"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Saturate
+	  Name			  "Saturation"
+	  SID			  "513"
+	  Ports			  [1, 1]
+	  Position		  [155, 170, 185, 200]
+	  InputPortMap		  "u0"
+	  UpperLimit		  "saturate_value"
+	  LowerLimit		  "-saturate_value"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  SID			  "514"
+	  Ports			  [3, 1]
+	  Position		  [195, 65, 215, 85]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "+++"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Velocity"
+	  SID			  "515"
+	  Ports			  [1, 1]
+	  Position		  [325, 60, 355, 90]
+	  InitialCondition	  "[0;0]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Robot Position"
+	  SID			  "516"
+	  Position		  [530, 68, 560, 82]
+	  IconDisplay		  "Port number"
+	  PortDimensions	  "[2 1]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Energy"
+	  SID			  "517"
+	  Position		  [530, 178, 560, 192]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  PortDimensions	  "[2 1]"
+	}
+	Line {
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  DstBlock		  "Acceleration"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Acceleration"
+	  SrcPort		  1
+	  DstBlock		  "Velocity"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Velocity"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  Branch {
+	    DstBlock		    "Position"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -40]
+	    DstBlock		    "B"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Position"
+	  SrcPort		  1
+	  Points		  [30, 0]
+	  Branch {
+	    Points		    [0, -65; -420, 0]
+	    DstBlock		    "Boundary Collisons"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Robot Position"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Energy Loss Calculation"
+	  SrcPort		  1
+	  Points		  [45, 0]
+	  Branch {
+	    DstBlock		    "Energy"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 65]
+	    DstBlock		    "Compare\nTo Constant"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Rate of Discharge"
+	  SrcPort		  1
+	  DstBlock		  "Energy Loss Calculation"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Saturation"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    DstBlock		    "Abs"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Sum"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  SrcBlock		  "Abs"
+	  SrcPort		  1
+	  DstBlock		  "Rate of Discharge"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Actuator Force"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  DstBlock		  "Saturation"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Compare\nTo Constant"
+	  SrcPort		  1
+	  Points		  [-145, 0; 0, -60]
+	  DstBlock		  "Product"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Boundary Collisons"
+	  SrcPort		  1
+	  DstBlock		  "Sum"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "B"
+	  SrcPort		  1
+	  Points		  [-40, 0]
+	  DstBlock		  "Sum"
+	  DstPort		  1
+	}
+	Annotation {
+	  Position		  [136, 164]
+	}
+      }
+    }
+    Block {
+      BlockType		      Stop
+      Name		      "Stop Simulation"
+      SID		      "40"
+      Position		      [1255, 633, 1380, 757]
+      ForegroundColor	      "white"
+      BackgroundColor	      "red"
+      ShowName		      off
+      FontName		      "Arial"
+      FontSize		      24
+    }
+    Block {
+      BlockType		      ModelReference
+      Name		      "Team_1_Strategy"
+      SID		      "583"
+      Ports		      [3, 2]
+      Position		      [825, 89, 1000, 261]
+      ForegroundColor	      "orange"
+      BackgroundColor	      "black"
+      ShowName		      off
+      FontName		      "Lucida Calligraphy"
+      FontSize		      28
+      ModelNameDialog	      "Team_1_Strategy"
+      SimulationMode	      "Normal"
+      ModelReferenceVersion   "1.26"
+      List {
+	ListType		InputPortNames
+	port0			"Ball Position"
+	port1			"Power"
+	port2			"Robot Position"
+      }
+      List {
+	ListType		OutputPortNames
+	port0			" Actuator Force 1"
+	port1			"Actuator Force 2"
+      }
+      List {
+	ListType		InputPortBusObjects
+	port0			""
+	port1			"Bus_Power"
+	port2			"Bus_Robot_Positions"
+      }
+      List {
+	ListType		OutputPortOutputBusAsStructs
+	port0			"off"
+	port1			"off"
+      }
+      CopyOfModelName	      "Team_1_Strategy"
+      MaskDisplay	      "disp(' TEAM 1\\n\\n')\ndisp('STRATEGY')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+    }
+    Block {
+      BlockType		      ModelReference
+      Name		      "Team_1_Strategy2"
+      SID		      "593"
+      Ports		      [3, 2]
+      Position		      [820, 705, 995, 885]
+      ForegroundColor	      "orange"
+      BackgroundColor	      "black"
+      ShowName		      off
+      FontName		      "Lucida Calligraphy"
+      FontSize		      28
+      ModelNameDialog	      "Team_2_Strategy"
+      SimulationMode	      "Normal"
+      ModelReferenceVersion   "1.28"
+      List {
+	ListType		InputPortNames
+	port0			"Ball Position"
+	port1			"Power"
+	port2			"Robot Position"
+      }
+      List {
+	ListType		OutputPortNames
+	port0			"Actuator Force 3"
+	port1			"Actuator Force 4"
+      }
+      List {
+	ListType		InputPortBusObjects
+	port0			""
+	port1			"Bus_Power"
+	port2			"Bus_Robot_Positions"
+      }
+      List {
+	ListType		OutputPortOutputBusAsStructs
+	port0			"off"
+	port1			"off"
+      }
+      CopyOfModelName	      "Team_2_Strategy"
+      MaskDisplay	      "disp(' TEAM 2\\n\\n')\ndisp('STRATEGY')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+    }
+    Block {
+      BlockType		      UnitDelay
+      Name		      "Unit Delay"
+      SID		      "630"
+      Position		      [1170, 678, 1205, 712]
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      UnitDelay
+      Name		      "Unit Delay1"
+      SID		      "631"
+      Position		      [1110, 678, 1145, 712]
+      SampleTime	      "-1"
+    }
+    Line {
+      Labels		      [2, 0]
+      SrcBlock		      "Robot 1 Dynamics"
+      SrcPort		      1
+      Points		      [105, 0; 0, 360]
+      DstBlock		      "Bus\nCreator1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Robot 2 Dynamics"
+      SrcPort		      1
+      Points		      [55, 0; 0, 230]
+      DstBlock		      "Bus\nCreator1"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Robot 3 Dynamics"
+      SrcPort		      1
+      Points		      [65, 0; 0, -180]
+      DstBlock		      "Bus\nCreator1"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Robot 4 Dynamics"
+      SrcPort		      1
+      Points		      [110, 0; 0, -300]
+      DstBlock		      "Bus\nCreator1"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "Bus\nCreator1"
+      SrcPort		      1
+      Points		      [60, 0]
+      Branch {
+	DstBlock		"Ball Dynamics"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -100]
+	Branch {
+	  DstBlock		  "Bus\nCreator6"
+	  DstPort		  2
+	}
+	Branch {
+	  Labels		  [0, 0]
+	  Points		  [0, -160]
+	  DstBlock		  "Team_1_Strategy"
+	  DstPort		  3
+	}
+      }
+      Branch {
+	Points			[0, 365]
+	DstBlock		"Team_1_Strategy2"
+	DstPort			3
+      }
+    }
+    Line {
+      SrcBlock		      "Robot 3 Dynamics"
+      SrcPort		      2
+      DstBlock		      "Bus\nCreator2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Robot 4 Dynamics"
+      SrcPort		      2
+      Points		      [145, 0; 0, -80]
+      DstBlock		      "Bus\nCreator2"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Bus\nCreator2"
+      SrcPort		      1
+      DstBlock		      "Team_1_Strategy2"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Team_1_Strategy2"
+      SrcPort		      1
+      DstBlock		      "Bus\nCreator5"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Team_1_Strategy2"
+      SrcPort		      2
+      DstBlock		      "Bus\nCreator5"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Bus\nCreator5"
+      SrcPort		      1
+      Points		      [60, 0; 0, 200; -1085, 0; 0, -195]
+      DstBlock		      "Bus\nSelector1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Team_1_Strategy"
+      SrcPort		      1
+      DstBlock		      "Bus\nCreator4"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Team_1_Strategy"
+      SrcPort		      2
+      DstBlock		      "Bus\nCreator4"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Bus\nCreator4"
+      SrcPort		      1
+      Points		      [30, 0; 0, -150; -1060, 0; 0, 170]
+      DstBlock		      "Bus\nSelector"
+      DstPort		      1
+    }
+    Line {
+      Name		      "<signal1>"
+      Labels		      [0, 0]
+      SrcBlock		      "Bus\nSelector"
+      SrcPort		      1
+      Points		      [45, 0; 0, -65]
+      DstBlock		      "Robot 1 Dynamics"
+      DstPort		      1
+    }
+    Line {
+      Name		      "<signal2>"
+      Labels		      [0, 0]
+      SrcBlock		      "Bus\nSelector"
+      SrcPort		      2
+      Points		      [45, 0; 0, 45]
+      DstBlock		      "Robot 2 Dynamics"
+      DstPort		      1
+    }
+    Line {
+      Name		      "<signal1>"
+      Labels		      [0, 0]
+      SrcBlock		      "Bus\nSelector1"
+      SrcPort		      1
+      Points		      [35, 0; 0, -45]
+      DstBlock		      "Robot 3 Dynamics"
+      DstPort		      1
+    }
+    Line {
+      Name		      "<signal2>"
+      Labels		      [0, 0]
+      SrcBlock		      "Bus\nSelector1"
+      SrcPort		      2
+      Points		      [35, 0; 0, 55]
+      DstBlock		      "Robot 4 Dynamics"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Ball Dynamics"
+      SrcPort		      3
+      Points		      [95, 0; 0, 165]
+      DstBlock		      "Unit Delay1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Ball Dynamics"
+      SrcPort		      1
+      Points		      [50, 0; 0, -120]
+      Branch {
+	DstBlock		"Bus\nCreator6"
+	DstPort			1
+      }
+      Branch {
+	Labels			[0, 0]
+	Points			[-280, 0]
+	Branch {
+	  Points		  [0, -210]
+	  DstBlock		  "Team_1_Strategy"
+	  DstPort		  1
+	}
+	Branch {
+	  Points		  [0, 405]
+	  DstBlock		  "Team_1_Strategy2"
+	  DstPort		  1
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "Bus\nCreator6"
+      SrcPort		      1
+      DstBlock		      "2D Visualization"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Ball Dynamics"
+      SrcPort		      2
+      Points		      [70, 0]
+      DstBlock		      "Bus\nCreator6"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Bus\nCreator3"
+      SrcPort		      1
+      DstBlock		      "Team_1_Strategy"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Robot 2 Dynamics"
+      SrcPort		      2
+      Points		      [30, 0; 0, -90]
+      DstBlock		      "Bus\nCreator3"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Robot 1 Dynamics"
+      SrcPort		      2
+      DstBlock		      "Bus\nCreator3"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Unit Delay"
+      SrcPort		      1
+      DstBlock		      "Stop Simulation"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Unit Delay1"
+      SrcPort		      1
+      DstBlock		      "Unit Delay"
+      DstPort		      1
+    }
+    Annotation {
+      Name		      "Netherlands"
+      Position		      [333, 613]
+      DropShadow	      on
+      FontName		      "Arial"
+      FontSize		      26
+    }
+    Annotation {
+      Name		      "Spain"
+      Position		      [328, 403]
+      DropShadow	      on
+      FontName		      "Arial"
+      FontSize		      26
+    }
+    Annotation {
+      Name		      "vs."
+      Position		      [328, 493]
+      FontName		      "Arial"
+      FontSize		      26
+    }
+  }
+}
+MatData {
+  NumRecords		  1
+  DataRecord {
+    Tag			    DataTag0
+    Data		    "  %)30     .    *!    8    (     @         %    \"     $    !     0         %  0 \"     $    8    =F5R<"
+    "VEO;@!C;VYT96YT &9O<FUA=   #@   #@    &    \"     8         !0    @    !     0    $         \"0    @    S,S,S,S/S/"
+    "PX   !8#P  !@    @    $          4    (     0   \",/   !         !     C#P  3F]T97,@86YD(&AE;' Z\"C$N(%1H92!D96UO("
+    "'-I;75L871E<R!A(#(@=G,N(#(@<F]B;W0@<V-E;F%R:6\\N(%1H92!R;V)O=',@87)E(&%S<W5M960@=&\\@8F4@:&5A=FEE<B!T:&%N('1H92!F;"
+    "V]T8F%L;\"X@5&AU<RP*86YY(&-O;&QI<VEO;B!B971W965N('1H92!B86QL(&%N9\"!T:&4@<F]B;W1S(&ES('!E<F9E8W1L>2!E;&%S=&EC+B!4:"
+    "&4@<F]B;W0@;6]T:6]N(&ES(&YO=\"!I;7!A8W1E9\"!B>2!T:&4*8V]L;&ES:6]N+@H*,BX@0V]L;&ES:6]N(&%M;VYG(')O8F]T<R!I<R!N;W0@:"
+    "6UP;&5M96YT960@87,@=&AE>2!A<F4@8V]N<VED97)E9\"!A<R!P;VEN=\"!M87-S97,N\"@HS+B!#;VQL:7-I;VX@;6]D96QI;F<@:6X@86QL(&-A"
+    "<V5S(&ES(&%S<W5M960@=&\\@8F4@87,@82!S<')I;F<@8V]N=&%C=\"!M;V1E;\"X@5VAE;B!T:&4@;V)J96-T(&-O;&QI9&EN9R!W:71H\"F$@8F"
+    "]U;F1A<GD@8V]M97,@8VQO<V4@=&\\@=&AA=\"!B;W5N9&%R>2P@82!F;W)C92!P<F]P<G1I;VYA;\"!T;R!T:&4@;F5G871I=F4@;V8@=&AE(\")P"
+    "96YE=')A=&EO;B!D:7-T86YC92(@:7,@\"F-O;7!U=&5D+@H*-\"X@5&AE('-T<F%T96=Y('-U8G-Y<W1E;7,@87)E(&EM<&QE;65N=&5D(&%S(&UO"
+    "9&5L(')E9F5R96YC97,N(%1H:7,@=V%S(&1O;F4@:6YT96YT:6]N86QL>2!S;R!T:&%T( IC;VUP971I;F<@=&5A;7,@8V]U;&0@<')O=&5C=\"!T:"
+    "&5I<B!S=')A=&5G:65S(&%N9\"!R=6X@=&AE('-I;75L871I;VX@86=A:6YS=\"!E86-H(&]T:&5R+B!5<V4@=&AE(&UO9&5L( IP<F]T96-T960@;"
+    "6]D92!T;R!G96YE<F%T92!M9&QP(&9I;&5S(&EN<W1E860@;V8@;61L(&9I;&5S.@H*/CX@4VEM=6QI;FLN36]D96Q2969E<F5N8V4N<')O=&5C=\""
+    "@G5&5A;5\\Q7U-T<F%T96=Y)RD*\"F%N9 H*/CX@4VEM=6QI;FLN36]D96Q2969E<F5N8V4N<')O=&5C=\"@G5&5A;5\\R7U-T<F%T96=Y)RD*\"C4"
+    "N(%)O8F]T(&1Y;F%M:6-S(&%R92!S:6UP;&4@9'EN86UI8W,@;V8@82!P;VEN=\"!M87-S+B!(;W=E=F5R+\"!T:&4@;6%S<R!I<R!I;G9E<G-E;'D"
+    "@<')O<&]R=&EO;F%L('1O('1H92 *8F%T=&5R>2!P;W=E<B!O<B B<W1A;6EN82(@;V8@=&AE(')O8F]T+B!3;VUE(&1A;7!I;F<@:7,@86QS;R!P="
+    "70@:6YT;R!T:&4@<WES=&5M('1O(&%V;VED('1O;R!M=6-H( IO=F5R<VAO;W0N($%L<V\\L(&5A8V@@=&EM92!T:&4@<F]B;W0@86-T=6%T97,@:7"
+    "1S96QF(&]R(&)R86ME<RP@:70@:6YC=7)S(&$@<VUA;&P@<&]W97(@;&]S<R!T:&5R96)Y( IL;W=E<FEN9R!I=',@96YD=7)A;F-E(&EN('1H92!G"
+    "86UE+@H*-BX@4&]S:71I;VYA;\"!C;V]R9&EN871E<R!I;B!T:&4@<WES=&5M(&%R92 R1\"!I+F4N(\"AX+'DI+B!4:&4@<VEG;F%L(&1I;65N<VE"
+    "O;G,@:&%V92!B965N('-E=\"!E>'!L:6-I=&QY+@I#;&EC:R!O;B!A;GD@;V8@=&AE(&]U='!U=\"!P;W)T<RT^<VEG;F%L(&%T=')I8G5T97,@;V8"
+    "@=&AE(&UA<VME9\"!S=6)S>7-T96US('1O('-E92!T:&4@9&EM96YS:6]N<RX*\"C<N($)A;&P@9'EN86UI8W,@:&%S(&$@<VEM<&QE(&EM<&QE;65"
+    "N=&%T:6]N+2!S86UE(\")S<')I;F<M8F%S960B(&-O;G1A8W0@9'EN86UI8W,N($9R;VT@=&AE(&)A;&PG<PIP;VEN=\"!O9B!V:65W+\"!T:&5R92"
+    "!A<F4@9FEV92!C;VYT86-T(&9O<F-E<R!T;R!B92!A8V-O=6YT960@9F]R.B!C;VYT86-T<R!W:71H('1H92 T(')O8F]T<R!A;F0@=&AO<V4@;V8*"
+    "=&AE(&)O=6YD87)I97,N\"@HX+B!/8G-E<G9E('1H870@=&AE('-O;'9E<B!H87,@8F5E;B!C:&%N9V5D('1O(&]D93$U<R!W:&EC:\"!I<R!A('-T"
+    ":69F('-O;'9E<BX@5&AE(')E87-O;B!F;W(@=&AI<R!I<PIT:&4@<W1I9F9N97-S('!R97-E;G0@:6X@=&AE('-Y<W1E;2!B96-A=7-E(&]F('1H92"
+    "!C;VYT86-T+V-O;&QI<VEO;B!M;V1E;&EN9R!W:71H(&AI9V@@<W!R:6YG(&-O;G-T86YT<RX*5&AI<R!C86X@9VEV92!R:7-E('1O(&UO9&5S('=I"
+    "=&@@<F5L871I=F5L>2!D:69F97)E;G0@9'EN86UI8W,N(%=I=&@@82!O9&4T-2!S;VQV97(L('1H92!F87-T97(@;6]D97,*=VEL;\"!F;W)C92!T:"
+    "&4@861A<'1I=F4@<V]L=F5R('1O('1A:V4@<VUA;&QE<B!S=&5P<R!S;&]W:6YG('1H92!S:6UU;&%T:6]N(&1O=VXN(&]D93$U<R!I9VYO<F5S('-"
+    "O;64@;V8*=&AE<V4@9F%S=\"!D>6YA;6EC<RX@\"@HY+B!!;&P@=&AE(&EC;VX@9')A=VEN9R!C;VUM86YD<R!O;B!T:&4@<F]B;W0@9'EN86UI8W,"
+    "@=V5R92!I;7!L96UE;G1E9\"!U<VEN9R!T:&4@<&%T8V@@8V]M;6%N9',N(%1H97-E\"G=E<F4@=&%K96X@9G)O;2!T:&4@9&5M;R!B>2!-:6ME(%="
+    "O;V1W87)D.@H*:'1T<#HO+W=W=RYM871H=V]R:W,N8V]M+VUA=&QA8F-E;G1R86PO9FEL965X8VAA;F=E+S@X-38M9FQA9W,*\"E5S92!O=&AE<B!F"
+    ";&%G<R!T;R!C=7-T;VUI>F4@=&AI<RX*\"C$P+B R1\"!A;FEM871I;VX@=V%S(&1O;F4@=7-I;F<@4VEM=6QI;FL@,T0@06YI;6%T:6]N+B!4:&4@"
+    "9FEE;&0@=V%S('1E>'1U<F5D('=I=&@@82!G<F%S<R!I;6%G92!A;F0@82 *=FEE=W!O:6YT('=A<R!S;R!S96QE8W1E9\"!S;R!T:&%T(&ET(&QO;"
+    "VME9\"!A<R R1\"X@5&AE(\")'3T%,(B!T97AT('=A<R!K97!T(&)E:&EN9\"!T:&4@9FEE;&0N(%1H92!M;VUE;G0L\"F$@9V]A;\"!I<R!S8V]R9"
+    "60L('1H:7,@=&5X=\"!K:7,@=')A;G-L871E9\"!T;R!T:&4@9G)O;G0@9VEV:6YG(&$@5%8@969F96-T+B!497AT=7)I;F<@=V%S(&%L<V\\@=7-E"
+    "9\"!T;PIP86EN=\"!T:&4@8F]D:65S(&]F('1H92!R;V)O=',@=VET:\"!T:&4@9FQA9W,N(%EO=2!W:6QL(&AA=F4@=&\\@8VAA;F=E('1H92!I;6"
+    "%G97,@:6X@;W)D97(@=&\\@8VAA;F=E\"G1H97-E+@H*,3$N(%!L87D@87)O=6YD('=I=&@@=&AE('-T<F%T96=Y('-U8G-Y<W1E;7,@=&\\@<V5E("
+    "&EF('EO=2!C86X@8V]M92!U<\"!W:71H(&5F9FEC:65N=\"!S=')A=&5G:65S('1O('-C;W)E\"F5A<FQY+B!.;W1E('1H870@96%C:\"!O9B!T:&4"
+    "@=&5A;7,@:&%S(&9U;&P@:VYO=VQE9&=E(&]F('1H92!O=&AE<G,G('!O<VET:6]N<R!A;F0@=&AO<V4@;V8@=&AE(&)A;&PN(%1H97D@\"F%L<V\\"
+    "@:&%V92!K;F]W;&5D9V4@;V8@=&AE(')E;6%I;FEN9R!P;W=E<B!I;B!T:&5I<B!T96%M)W,@8F%T=&5R:65S+B!4:&5R92!I<R!N;R!V96QO8VET>"
+    "2!I;F9O<FUA=&EO;B *879A:6QA8FQE+B *\"E%U97-T:6]N<SH*,2X@2&]W(&-A;B!Y;W4@=7-E(%-T871E9FQO=R!T;R!I;7!L96UE;G0@82!F:6"
+    "YE('-T871E(&UA8VAI;F4@=&AA=\"!U<V5S(&$@;6EX(&]F(&%T=&%C:R!A;F0@9&5F96YS:79E\"G-T<F%T96=I97,@8F%S960@;VX@8F%L;\"!L;"
+    "V-A=&EO;C\\*\"C(N(%=H870@8FQO8VL@:6X@4VEM=6QI;FL@<VAO=6QD('EO=2!U<V4@=&\\@:6YP=70@82!N97<@<VEG;F%L(&EN=&\\@=&AE<V4"
+    "@<W1R871E9WD@<W5B<WES=&5M<R!S;R!T:&%T\"G1I;64@96QA<'-E9\"!S:6YC92!T:&4@<W1A<G0@;V8@=&AE(&=A;64@8V%N(&)E(&UE87-U<F5"
+    "D(&%N9\"!H96YC92!U<V5D(&%S('!A<G0@;V8@=&AE('-T<F%T96=Y+@H*,RX@261E;G1I9GD@=&AE(&-O;G1E;G1S(&EN<VED92!T:&4@34%4(&9I"
+    ";&4@=7-E9\"!I;B!T:&4@9&5M;RX@5VAA=\"!I<R!T:&4@(G1Y<&4B(&]F('1H92!C;VYT96YT<R!O9B!T:&4@\"F1A=&$@:6YS:61E('1H92!F:6Q"
+    "E/R!)9&5N=&EF>2!T:&4@9G5N8W1I;VX@=&AA=\"!L;V%D<R!T:&ES($U!5\"!F:6QE+@H*-\"X@5VAY(&1I9\"!W92!N965D('1H97-E(&1A=&$@;"
+    "V)J96-T<R!T:&%T('EO=2!I9&5N=&EF:65D(&EN(#$T(&9O<B!O=7(@;6]D96P_\"@HU+B!)9&5N=&EF>2!A(&UO9&5L(&%R8VAI=&5C='5R92!T:&"
+    "%T('-U<'!O<G1S(&$@,FX@=G,@,FX@9V%M92!S8V5N87)I;R H)VXG(&ES(&$@;F%T=7)A;\"!N=6UB97(I\"@H*\"C$V+B        X    P    !"
+    "@    @    $          4    (     0    ,    !         !   P!46%0 "
+  }
+}
+# Finite State Machines
+#
+#    Stateflow Version 7.5 (R2010a) dated Jul 24 2010, 07:30:36
+#
+#
+
+
+Stateflow {
+  machine {
+    id			    1
+    name		    "RoboSoccer_10b"
+    created		    "07-Jul-2010 21:30:39"
+    isLibrary		    0
+    firstTarget		    40
+    sfVersion		    75014000.000003
+  }
+  chart {
+    id			    2
+    name		    "Ball Dynamics/Collision Modeling"
+    windowPosition	    [384.879 306.305 200.25 189.75]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 1680 1050 1.333333333333333]
+    treeNode		    [0 3 0 0]
+    firstTransition	    5
+    firstJunction	    4
+    viewObj		    2
+    machine		    1
+    ssIdHighWaterMark	    10
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    6
+    chartFileNumber	    2
+    disableImplicitCasting  1
+    eml {
+      name		      "fcn"
+    }
+  }
+  state {
+    id			    3
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    2
+    treeNode		    [2 0 0 0]
+    superState		    SUBCHART
+    subviewer		    2
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function [force, goal] = fcn(ball_velocity,robot_position, ball_position)\n%#eml\n% Initialize va"
+      "riables\n\nforce1=zeros(2,1);\nforce2=zeros(2,1);\nforce3=zeros(2,1);\nforce4=zeros(2,1);\ncollision_force=zeros"
+      "(2,1);\nd1=zeros(2,1);\nd2=zeros(2,1);\nd3=zeros(2,1);\nd4=zeros(2,1);\nK=100;\ngoal=0;\ntol=25;\nB=0.01;\n\n% C"
+      "ompute dot products and calculate impulsive forces on the ball\nd1=robot_position(1:2,1)-ball_position;\nd2=robo"
+      "t_position(3:4,1)-ball_position;\nd3=robot_position(5:6,1)-ball_position;\nd4=robot_position(7:8,1)-ball_positio"
+      "n;\n\nif   dot(d1,d1) <tol\n     force1=-K*d1;\nend\n\nif   dot(d2,d2) <tol\n     force2=-K*d2;\nend\n\nif   dot"
+      "(d3,d3) <tol\n     force3=-K*d3;\nend\n\nif   dot(d4,d4) <tol\n     force4=-K*d4;\nend\n\n% Code to check for bo"
+      "undary collisions for the ball\nif ball_position(1,1)<0 \n    collision_force(1,1)=-K*ball_position(1,1);\nend\n"
+      "\nif ball_position(1,1)>200 \n    collision_force(1,1)=K*(200-ball_position(1,1));\nend\n\nif ball_position(2,1)"
+      "<0 \n    collision_force(2,1)=-K*ball_position(2,1);\nend\n\nif ball_position(2,1)>100 \n    collision_force(2,1"
+      ")=K*(100-ball_position(2,1)); \nend\n\n% Total force\nforce=collision_force+force1+force2+force3+force4-B*ball_v"
+      "elocity;\n\n% Goal scored\nif ((ball_position(1,1)<=0) && (ball_position(2,1)>41) && (ball_position(2,1)<59))\n "
+      "   goal=1; \nend\n\nif ((ball_position(1,1)>=200) && (ball_position(2,1)>41) && (ball_position(2,1)<59))\n    go"
+      "al=1; \nend"
+      editorLayout	      "100 M4x1[225 225 576 480]"
+    }
+  }
+  junction {
+    id			    4
+    position		    [23.5747 49.5747 7]
+    chart		    2
+    linkNode		    [2 0 0]
+    subviewer		    2
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    5
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      4
+      intersection	      [7 0 -1 -1 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    2
+    linkNode		    [2 0 0]
+    dataLimits		    [23.575 23.575 14.625 34.575]
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  data {
+    id			    6
+    ssIdNumber		    10
+    name		    "ball_velocity"
+    linkNode		    [2 0 7]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    7
+    ssIdNumber		    4
+    name		    "robot_position"
+    linkNode		    [2 6 8]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"[8 ;1]"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    8
+    ssIdNumber		    6
+    name		    "ball_position"
+    linkNode		    [2 7 9]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"[2;1]"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    9
+    ssIdNumber		    5
+    name		    "force"
+    linkNode		    [2 8 10]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"[2;1]"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    10
+    ssIdNumber		    7
+    name		    "goal"
+    linkNode		    [2 9 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  instance {
+    id			    11
+    name		    "Ball Dynamics/Collision Modeling"
+    machine		    1
+    chart		    2
+  }
+  chart {
+    id			    12
+    name		    "Robot 1 Dynamics/Boundary Collisons"
+    windowPosition	    [375.75 203.25 200.25 189.75]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 1920 1200 1.333333333333333]
+    treeNode		    [0 13 0 0]
+    firstTransition	    15
+    firstJunction	    14
+    viewObj		    12
+    machine		    1
+    ssIdHighWaterMark	    5
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    16
+    chartFileNumber	    3
+    disableImplicitCasting  1
+    eml {
+      name		      "fcn"
+    }
+  }
+  state {
+    id			    13
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    12
+    treeNode		    [12 0 0 0]
+    superState		    SUBCHART
+    subviewer		    12
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function collision_force = fcn(robot_position)\n%#eml\nK=100;\ncollision_force=[0; 0]; \nif robot"
+      "_position(1,1)<0 \n    collision_force(1,1)=-K*robot_position(1,1);\nend\n\nif robot_position(1,1)>200 \n    col"
+      "lision_force(1,1)=K*(200-robot_position(1,1));\nend\n\nif robot_position(2,1)<0 \n    collision_force(2,1)=-K*ro"
+      "bot_position(2,1);\nend\n\nif robot_position(2,1)>100 \n    collision_force(2,1)=K*(100-robot_position(2,1));\ne"
+      "nd"
+      editorLayout	      "100 M4x1[122 155 708 394]"
+    }
+  }
+  junction {
+    id			    14
+    position		    [23.5747 49.5747 7]
+    chart		    12
+    linkNode		    [12 0 0]
+    subviewer		    12
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    15
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      14
+      intersection	      [7 0 -1 -1 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    12
+    linkNode		    [12 0 0]
+    dataLimits		    [23.575 23.575 14.625 34.575]
+    subviewer		    12
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  data {
+    id			    16
+    ssIdNumber		    4
+    name		    "robot_position"
+    linkNode		    [12 0 17]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    17
+    ssIdNumber		    5
+    name		    "collision_force"
+    linkNode		    [12 16 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  instance {
+    id			    18
+    name		    "Robot 1 Dynamics/Boundary Collisons"
+    machine		    1
+    chart		    12
+  }
+  chart {
+    id			    19
+    name		    "Robot 4 Dynamics/Boundary Collisons"
+    windowPosition	    [405.75 173.25 200.25 189.75]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 1920 1200 1.333333333333333]
+    treeNode		    [0 20 0 0]
+    firstTransition	    22
+    firstJunction	    21
+    viewObj		    19
+    machine		    1
+    ssIdHighWaterMark	    5
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    23
+    chartFileNumber	    4
+    disableImplicitCasting  1
+    eml {
+      name		      "fcn"
+    }
+  }
+  state {
+    id			    20
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    19
+    treeNode		    [19 0 0 0]
+    superState		    SUBCHART
+    subviewer		    19
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function collision_force = fcn(robot_position)\n%#eml\nK=100;\ncollision_force=[0; 0]; \nif robot"
+      "_position(1,1)<0 \n    collision_force(1,1)=-K*robot_position(1,1);\nend\n\nif robot_position(1,1)>200 \n    col"
+      "lision_force(1,1)=K*(200-robot_position(1,1));\nend\n\nif robot_position(2,1)<0 \n    collision_force(2,1)=-K*ro"
+      "bot_position(2,1);\nend\n\nif robot_position(2,1)>100 \n    collision_force(2,1)=K*(100-robot_position(2,1));\ne"
+      "nd"
+      editorLayout	      "100 M4x1[459 115 1080 733]"
+    }
+  }
+  junction {
+    id			    21
+    position		    [23.5747 49.5747 7]
+    chart		    19
+    linkNode		    [19 0 0]
+    subviewer		    19
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    22
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      21
+      intersection	      [7 0 -1 -1 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    19
+    linkNode		    [19 0 0]
+    dataLimits		    [23.575 23.575 14.625 34.575]
+    subviewer		    19
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  data {
+    id			    23
+    ssIdNumber		    4
+    name		    "robot_position"
+    linkNode		    [19 0 24]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    24
+    ssIdNumber		    5
+    name		    "collision_force"
+    linkNode		    [19 23 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  instance {
+    id			    25
+    name		    "Robot 4 Dynamics/Boundary Collisons"
+    machine		    1
+    chart		    19
+  }
+  chart {
+    id			    26
+    name		    "Robot 3 Dynamics/Boundary Collisons"
+    windowPosition	    [390.75 188.25 200.25 189.75]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 1920 1200 1.333333333333333]
+    treeNode		    [0 27 0 0]
+    firstTransition	    29
+    firstJunction	    28
+    viewObj		    26
+    machine		    1
+    ssIdHighWaterMark	    5
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    30
+    chartFileNumber	    5
+    disableImplicitCasting  1
+    eml {
+      name		      "fcn"
+    }
+  }
+  state {
+    id			    27
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    26
+    treeNode		    [26 0 0 0]
+    superState		    SUBCHART
+    subviewer		    26
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function collision_force = fcn(robot_position)\n%#eml\nK=100;\ncollision_force=[0; 0]; \nif robot"
+      "_position(1,1)<0 \n    collision_force(1,1)=-K*robot_position(1,1);\nend\n\nif robot_position(1,1)>200 \n    col"
+      "lision_force(1,1)=K*(200-robot_position(1,1));\nend\n\nif robot_position(2,1)<0 \n    collision_force(2,1)=-K*ro"
+      "bot_position(2,1);\nend\n\nif robot_position(2,1)>100 \n    collision_force(2,1)=K*(100-robot_position(2,1));\ne"
+      "nd"
+      editorLayout	      "100 M4x1[459 115 1080 733]"
+    }
+  }
+  junction {
+    id			    28
+    position		    [23.5747 49.5747 7]
+    chart		    26
+    linkNode		    [26 0 0]
+    subviewer		    26
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    29
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      28
+      intersection	      [7 0 -1 -1 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    26
+    linkNode		    [26 0 0]
+    dataLimits		    [23.575 23.575 14.625 34.575]
+    subviewer		    26
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  data {
+    id			    30
+    ssIdNumber		    4
+    name		    "robot_position"
+    linkNode		    [26 0 31]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    31
+    ssIdNumber		    5
+    name		    "collision_force"
+    linkNode		    [26 30 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  instance {
+    id			    32
+    name		    "Robot 3 Dynamics/Boundary Collisons"
+    machine		    1
+    chart		    26
+  }
+  chart {
+    id			    33
+    name		    "Robot 2 Dynamics/Boundary Collisons"
+    windowPosition	    [390.75 188.25 200.25 189.75]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 1920 1200 1.333333333333333]
+    treeNode		    [0 34 0 0]
+    firstTransition	    36
+    firstJunction	    35
+    viewObj		    33
+    machine		    1
+    ssIdHighWaterMark	    5
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    37
+    chartFileNumber	    6
+    disableImplicitCasting  1
+    eml {
+      name		      "fcn"
+    }
+  }
+  state {
+    id			    34
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    33
+    treeNode		    [33 0 0 0]
+    superState		    SUBCHART
+    subviewer		    33
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function collision_force = fcn(robot_position)\n%#eml\nK=100;\ncollision_force=[0; 0]; \nif robot"
+      "_position(1,1)<0 \n    collision_force(1,1)=-K*robot_position(1,1);\nend\n\nif robot_position(1,1)>200 \n    col"
+      "lision_force(1,1)=K*(200-robot_position(1,1));\nend\n\nif robot_position(2,1)<0 \n    collision_force(2,1)=-K*ro"
+      "bot_position(2,1);\nend\n\nif robot_position(2,1)>100 \n    collision_force(2,1)=K*(100-robot_position(2,1));\ne"
+      "nd"
+      editorLayout	      "100 M4x1[459 115 1080 733]"
+    }
+  }
+  junction {
+    id			    35
+    position		    [23.5747 49.5747 7]
+    chart		    33
+    linkNode		    [33 0 0]
+    subviewer		    33
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    36
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      35
+      intersection	      [7 0 -1 -1 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    33
+    linkNode		    [33 0 0]
+    dataLimits		    [23.575 23.575 14.625 34.575]
+    subviewer		    33
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  data {
+    id			    37
+    ssIdNumber		    4
+    name		    "robot_position"
+    linkNode		    [33 0 38]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    38
+    ssIdNumber		    5
+    name		    "collision_force"
+    linkNode		    [33 37 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  instance {
+    id			    39
+    name		    "Robot 2 Dynamics/Boundary Collisons"
+    machine		    1
+    chart		    33
+  }
+  target {
+    id			    40
+    name		    "sfun"
+    description		    "Default Simulink S-Function Target."
+    machine		    1
+    linkNode		    [1 0 0]
+  }
+}
