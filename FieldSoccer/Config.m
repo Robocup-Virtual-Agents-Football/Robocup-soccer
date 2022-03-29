@@ -29,7 +29,7 @@ cfg.num_players = cfg.num_players_red + cfg.num_players_blue;
 cfg.start_pos(2,:) = [-1,0,0];
 cfg.start_pos(3,:) = [-2,-1,0];
 cfg.start_pos(4,:) = [-2,1,0];
-cfg.start_pos(5,:) = [-3,-0.5,0];
+cfg.start_pos(5,:) = [2,-1,pi];
 cfg.start_pos(1,:) = [-3,0.5,0];
 
 cfg.start_pos(7,:) = [1,0,pi];
@@ -55,6 +55,7 @@ cfg.ball_friction = 0.35; %m/s^2
 cfg.MinBallVel = 0.01; %m/s
 
 %player parameters
+cfg.player_radius = 0.1; %the same radius as ball_radius
 cfg.player_hitbox_radius = 0.1; %m
 cfg.player_accelLin = [0.04,0.02]; %m/s^2
 cfg.player_accelAng = 0.04; %rad/s^2

@@ -13,7 +13,10 @@ classdef ball
         realtime %if simulation is realtime
         timestep %simulation timestep
         radius %ball radius
-        draw_handle %ball drawing handle
+        draw_handle1 %ball drawing handle
+        draw_handle2
+        draw_handle3
+        draw_handle4
         friction %ball friction deceleration
         cfg %local configuration variable
     end
@@ -28,13 +31,16 @@ classdef ball
             obj.realtime = cfg.realtime;
             obj.timestep = cfg.timestep;
             obj.radius = cfg.ball_radius;
-            obj.draw_handle = [];
+            obj.draw_handle1 = [];
+            obj.draw_handle2 = [];
+            obj.draw_handle3 = [];
+            obj.draw_handle4 = [];
             obj.friction = cfg.ball_friction; 
             obj.cfg = cfg;
             obj.prev_touch = [];
             obj.kick_loc = [];
         end
-        
+ %%       
         %set ball velocity
         function obj = set_vel(obj,vel)
             obj.vel = vel;
@@ -73,16 +79,23 @@ classdef ball
             dp = obj.vel*dt;
             obj.pos = obj.pos + dp;
         end
-        
+%%        
         %draw ball on given axes
         function obj = draw_ball(obj,ax)
-            d = obj.radius*2;
-            px = obj.pos(1) - obj.radius;
-            py = obj.pos(2) - obj.radius;
+           % d = obj.radius*2;
+%             px = obj.pos(1) - obj.radius;
+%             py = obj.pos(2) - obj.radius;
             
-            delete(obj.draw_handle);
-            obj.draw_handle = rectangle(ax,'Position',[px py d d],...
-                'Curvature',[1,1],'FaceColor','black','EdgeColor','none');            
+            delete(obj.draw_handle1);
+            delete(obj.draw_handle2);
+            delete(obj.draw_handle3);
+            delete(obj.draw_handle4);
+            obj.draw_handle1 = viscircles(ax,obj.pos,0.0715,'Color','black');
+            obj.draw_handle2 = viscircles(ax,obj.pos,0.0515,'Color','white');
+            obj.draw_handle3 = viscircles(ax,obj.pos,0.0115,'Color','white');
+            obj.draw_handle4 = viscircles(ax,obj.pos,0.0715-0.06,'Color','white');
+%             obj.draw_handle = rectangle(ax,'Position',[px py d d],...
+%                 'Curvature',[1,1],'FaceColor','white','EdgeColor','none');            
         end
         
     end    
