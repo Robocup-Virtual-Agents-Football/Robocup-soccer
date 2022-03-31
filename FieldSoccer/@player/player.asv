@@ -19,34 +19,15 @@ classdef player
         role %player role
         pffs %potential field functions for all roles
         imSelection
-%         frame1
-%         frame2
-%         frame3
-%         frame4
-%         frame5
-%         frame6
-%         frame7
-%         frame8
-%         frame9
-        frame1r
-        frame2r
-        frame3r
-        frame4r
-        frame5r
-        frame6r
-        frame7r
-        frame8r
-        frame9r
-
-        frame1b
-        frame2b
-        frame3b
-        frame4b
-        frame5b
-        frame6b
-        frame7b
-        frame8b
-        frame9b
+        frame1
+        frame2
+        frame3
+        frame4
+        frame5
+        frame6
+        frame7
+        frame8
+        frame9
      
     end
 
@@ -139,34 +120,15 @@ classdef player
             obj.radius = cfg.player_radius;
            
             obj.imSelection = randi([0 8]);
-%             obj.frame1 = imread('1.png');
-%             obj.frame2 = imread('2.png');
-%             obj.frame3 = imread('3.png');
-%             obj.frame4 = imread('4.png');
-%             obj.frame5 = imread('5.png');
-%             obj.frame6 = imread('6.png');
-%             obj.frame7 = imread('7.png');
-%             obj.frame8 = imread('8.png');
-%             obj.frame9 = imread('9.png');
-            obj.frame1r = imread('1r.png');
-            obj.frame2r = imread('2r.png');
-            obj.frame3r = imread('3r.png');
-            obj.frame4r = imread('4r.png');
-            obj.frame5r = imread('5r.png');
-            obj.frame6r = imread('6r.png');
-            obj.frame7r = imread('7r.png');
-            obj.frame8r = imread('8r.png');
-            obj.frame9r = imread('9r.png');
-
-            obj.frame1b = imread('1b.png');
-            obj.frame2b = imread('2b.png');
-            obj.frame3b = imread('3b.png');
-            obj.frame4b = imread('4b.png');
-            obj.frame5b = imread('5b.png');
-            obj.frame6b = imread('6b.png');
-            obj.frame7b = imread('7b.png');
-            obj.frame8b = imread('8b.png');
-            obj.frame9b = imread('9b.png');
+            obj.frame1 = imread('1.png');
+            obj.frame2 = imread('2.png');
+            obj.frame3 = imread('3.png');
+            obj.frame4 = imread('4.png');
+            obj.frame5 = imread('5.png');
+            obj.frame6 = imread('6.png');
+            obj.frame7 = imread('7.png');
+            obj.frame8 = imread('8.png');
+            obj.frame9 = imread('9.png');
           
 
 
@@ -258,69 +220,45 @@ classdef player
           
 %%
 
-            X = interp1([-5,5],[0.1825,0.8125],obj.pos(1)); %
-            Y = interp1([-4,4],[0.07,0.885],obj.pos(2));%
-            angle = obj.pos(3)*180/pi+270;
-            
-            % % X = 0.1825; %most left x
-            % X = 0.5; %most right x
-            % % Y = 0.07; %most btm y
-            % Y = 0.5; %most btm y
-            % angle = 0;
-            % angle =   90;
+X = interp1([-5,5],[0.1825,0.8125],obj.pos(1)); %
+Y = interp1([-4,4],[0.07,0.885],obj.pos(2));%
+angle = obj.pos(3)*180/pi+270;
 
-            if strcmp(obj.team_color,'red')
-                if obj.imSelection == 0
-                    img = imrotate(obj.frame1r,angle,'crop');
-                elseif obj.imSelection == 1
-                    img = imrotate(obj.frame2r,angle,'crop');
-                elseif obj.imSelection == 2
-                    img = imrotate(obj.frame3r,angle,'crop');
-                elseif obj.imSelection == 3
-                    img = imrotate(obj.frame4r,angle,'crop');
-                elseif obj.imSelection == 4
-                    img = imrotate(obj.frame5r,angle,'crop');
-                elseif obj.imSelection == 5
-                    img = imrotate(obj.frame6r,angle,'crop');
-                elseif obj.imSelection == 6
-                    img = imrotate(obj.frame7r,angle,'crop');
-                elseif obj.imSelection == 7
-                    img = imrotate(obj.frame8r,angle,'crop');
-                elseif obj.imSelection == 8
-                    img = imrotate(obj.frame9r,angle,'crop');
-                end
+% % X = 0.1825; %most left x
+% X = 0.5; %most right x
+% % Y = 0.07; %most btm y
+% Y = 0.5; %most btm y
+% angle = 0;
 
-            else
-                if obj.imSelection == 0
-                    img = imrotate(obj.frame1b,angle,'crop');
-                elseif obj.imSelection == 1
-                    img = imrotate(obj.frame2b,angle,'crop');
-                elseif obj.imSelection == 2
-                    img = imrotate(obj.frame3b,angle,'crop');
-                elseif obj.imSelection == 3
-                    img = imrotate(obj.frame4b,angle,'crop');
-                elseif obj.imSelection == 4
-                    img = imrotate(obj.frame5b,angle,'crop');
-                elseif obj.imSelection == 5
-                    img = imrotate(obj.frame6b,angle,'crop');
-                elseif obj.imSelection == 6
-                    img = imrotate(obj.frame7b,angle,'crop');
-                elseif obj.imSelection == 7
-                    img = imrotate(obj.frame8b,angle,'crop');
-                elseif obj.imSelection == 8
-                    img = imrotate(obj.frame9b,angle,'crop');
-                end
-            end
+% angle =   90;
+if obj.imSelection == 0
+img = imrotate(obj.frame1,angle,'crop');
+elseif obj.imSelection == 1
+img = imrotate(obj.frame2,angle,'crop');
+elseif obj.imSelection == 2
+img = imrotate(obj.frame3,angle,'crop');
+elseif obj.imSelection == 3
+img = imrotate(obj.frame4,angle,'crop');
+elseif obj.imSelection == 4
+img = imrotate(obj.frame5,angle,'crop');
+elseif obj.imSelection == 5
+img = imrotate(obj.frame6,angle,'crop');
+elseif obj.imSelection == 6
+img = imrotate(obj.frame7,angle,'crop');
+elseif obj.imSelection == 7
+img = imrotate(obj.frame8,angle,'crop');
+elseif obj.imSelection == 8
+img = imrotate(obj.frame9,angle,'crop');
+end
+frame = img;
+alpha1 = img(:,:,1);
+alpha2 = img(:,:,2);
+alpha3 = img(:,:,3);
 
-            frame = img;
-            alpha1 = img(:,:,1);
-            alpha2 = img(:,:,2);
-            alpha3 = img(:,:,3);
-            
-            axes('Position',[X Y 0.04 0.08]);
-            obj.draw_handle1 = image(frame, 'AlphaData', alpha1);hold on;
-            obj.draw_handle2 = image(frame, 'AlphaData', alpha2);hold on;
-            obj.draw_handle3 = image(frame, 'AlphaData', alpha3);hold on;
+axes('Position',[X Y 0.04 0.08]);
+obj.draw_handle1 = image(frame, 'AlphaData', alpha1);hold on;
+obj.draw_handle2 = image(frame, 'AlphaData', alpha2);hold on;
+obj.draw_handle3 = image(frame, 'AlphaData', alpha3);hold on;
 
 %%
 %             temp = imread('walk.png');
@@ -516,26 +454,26 @@ classdef player
             tmp = player.xya2transform(obj.pos);
             obj.pos = player.transform2xya(tmp+dp_global);
              
-            %update imSelection
-            if obj.imSelection == 0
-                obj.imSelection = 1;
-            elseif obj.imSelection == 1
-                obj.imSelection = 2;
-            elseif obj.imSelection == 2
-                obj.imSelection = 3;
-            elseif obj.imSelection == 3
-                obj.imSelection = 4;
-            elseif obj.imSelection == 4
-                obj.imSelection = 5;
-            elseif obj.imSelection == 5
-                obj.imSelection = 6;
-            elseif obj.imSelection == 6
-                obj.imSelection = 7;
-            elseif obj.imSelection == 7
-                obj.imSelection = 8;
-            elseif obj.imSelection == 8
-                obj.imSelection = 0;
-            end
+            % % % %update imSelection
+if obj.imSelection == 0
+obj.imSelection = 1;
+elseif obj.imSelection == 1
+obj.imSelection = 2;
+elseif obj.imSelection == 2
+obj.imSelection = 3;
+elseif obj.imSelection == 3
+obj.imSelection = 4;
+elseif obj.imSelection == 4
+obj.imSelection = 5;
+elseif obj.imSelection == 5
+obj.imSelection = 6;
+elseif obj.imSelection == 6
+obj.imSelection = 7;
+elseif obj.imSelection == 7
+obj.imSelection = 8;
+elseif obj.imSelection == 8
+obj.imSelection = 0;
+end
             %update game time
             obj.gametime = obj.gametime + dt;
         end
